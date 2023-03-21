@@ -1,0 +1,21 @@
+<!-- calculate simple interest -->
+
+<button onclick="calSimpleInterest(10000, 8, 10)"> Calculate Interest</button>
+
+
+<script>
+    function calSimpleInterest(amount, roi, duration){
+        console.log("Amount = " + amount + " ROI = " + roi + " Duration = " + duration );
+        si = amount * roi * duration / 100;
+        console.log(" Simple Interest =  " + si);
+
+        finalAmount = amount + si;
+        console.log("Final Amount = " + finalAmount);
+        
+    }
+
+
+    //function define
+    calSimpleInterest(10000, 7, 10);
+    calSimpleInterest(10000, 12, 10);
+</script>

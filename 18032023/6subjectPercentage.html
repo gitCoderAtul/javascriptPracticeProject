@@ -1,0 +1,14 @@
+<button onclick="calPercentage(75,60,80,78)" >calculate Percentage</button>
+
+<script>
+    //calculate percentage 
+    //function define
+    function calPercentage(physics,chemistry,maths,biology){
+        console.log("Marks of Subject " + physics + " " + chemistry + " " + maths + " " + biology);
+        total = physics + chemistry + maths + biology; 
+        console.log("Total Marks Obtained " + total);
+
+        percentage = total/400*100;
+        console.log("Percentage of ABS = " + percentage);
+    }
+</script>

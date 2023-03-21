@@ -1,0 +1,13 @@
+<button type="button" onclick="calDicount(10000, 20)">To Check Discount</button>
+<button type="button" onclick="calDicount(16000, 10)">To Check Class Fee with Discount</button>
+
+<script>
+    //function call calculate discount
+    function calDicount(amount, discountOffer){
+        console.log("amount = " + amount + " and " + "discount offer = " + discountOffer);
+        discount = amount * discountOffer / 100;
+        console.log("discount amount = " + discount);
+        finalAmount = amount - discount;
+        console.log( "Final Amount to paid is " + finalAmount);
+    }
+</script>
