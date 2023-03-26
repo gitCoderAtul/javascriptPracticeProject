@@ -1,16 +1,27 @@
+<!--  how to class name using js -->
+<style>
+    .class1{
+        background-color: aqua;
+    }
+    .class2{
+        border:5px solid whitesmoke;
+        box-shadow: 1px 2px 5px gray;
+        padding: 15px;
+    }
+</style>
+
+<p onmouseover="myfunc(this)">
+Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js
+Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js
+Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js
+Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js Add Class Name Using Js
+
+</p>
+
 <script>
-    function openModalBoxes() {
-        console.log("modal box");
+    function myfunc(currentEle){
+        console.log(currentEle);
+        currentEle.className = "class1 class2"
     }
-    function valid(){
-        console.log("validate function")
-    }
-
-    function foucsFuction(){
-        console.log("focus function")
-    }
-
-//call
-
 </script>
-<button onclick="openModalBoxes(); valid();" onfocus="foucsFuction()"> Open Box</button>
+

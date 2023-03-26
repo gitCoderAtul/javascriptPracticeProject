@@ -1,14 +1,19 @@
+<style>
+
+</style>
+
+<!-- onchange event -->
+<select onchange="myfunc(this)">
+    <option value="1">Nike</option>
+    <option value="2">Puma</option>
+    <option value="3">sparks</option>
+    <option value="4">Addidas</option>
+</select>
+
+<input type="file" onchange="myfunc(this)">
 <script>
-    function calDiscount(amount,dis){
-        console.log(amount,dis);
-
-        discount = amount * dis/100;
-        console.log(discount);
-
-        finalAmount = amount - discount;
-        console.log(finalAmount);
-    }
-
+function myfunc(currentEle){
+    console.log(currentEle);
+    console.log(currentEle.value);
+}
 </script>
-
-<button onClick="calDiscount(100000, 20)"> Check Final Amount</button>

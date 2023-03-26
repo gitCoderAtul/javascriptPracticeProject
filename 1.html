@@ -1,11 +1,18 @@
-<script>
-    //function define
-    function  volume(){
-        no = 50;
-        console.log(no);
-    }
+<!-- style using js -->
+<p onmouseover="myfunc(this)">
+    aofosdjf;oadfi;oa  aofosdjf;oadfi;oa  aofosdjf;oadfi;oa aofosdjf;oadfi;oa 
+    aofosdjf;oadfi;oa  aofosdjf;oadfi;oa aofosdjf;oadfi;oa aofosdjf;oadfi;oa 
+</p>
 
-    //function call
-    volume();
+<script>
+//function
+    function myfunc(currentEle){
+        console.log(currentEle);
+        console.log(currentEle.style);
+        currentEle.style.width = "500px";
+        currentEle.style.padding = "20px";
+        currentEle.style.border = "2px solid blue";
+        currentEle.style.backgroundColor = "whitesmoke";
+    }
 
 </script>

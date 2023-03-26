@@ -1,13 +1,27 @@
-<script>
-    // calculate percentage
-    function marks(eng,mar,sci){
-        console.log(eng,mar,sci);
-        total = eng + mar + sci;
-        console.log("Total Marks = " + total);
+<!-- click hide div -->
+<style>
 
-        percentage = total/300 * 100;
-        console.log("Percentage = " + percentage);
+h2{
+    background: url("https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/add-48.png") no-repeat right center;
+
+}
+</style>
+<h2 onclick="myfunc(this)">
+    Product Details
+</h2>
+<p style="display: none;">
+    Visble Section Visble Section Visble Section Visble Section Visble Section
+    Visble Section Visble Section Visble Section Visble Section Visble Section
+    Visble Section Visble Section Visble Section Visble Section Visble Section
+    Visble Section Visble Section Visble Section Visble Section Visble Section
+    Visble Section Visble Section Visble Section Visble Section Visble Section
+</p>
+
+<script>
+    function myfunc(currentEle){
+        console.log(currentEle);
+        console.log(currentEle.style);
+        currentEle.nextElementSibling.style.display = "block";
+        currentEle.style.background = `url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-minus-48.png') no-repeat right center`
     }
-    marks(70,80,65);
-    marks(90,60,85);
 </script>

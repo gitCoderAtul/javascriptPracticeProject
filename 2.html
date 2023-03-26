@@ -1,11 +1,14 @@
-[<script>
-    function suqreNo(){
-        no = 10;
+<!-- input -->
 
-        ans = no*no;
-        console.log(ans);
+<input type="text" onfocus="myfunc(this)">
+<script>
+    //function
+    function myfunc(currentEle){
+        console.log(currentEle);
+        console.log(currentEle.style); 
+        currentEle.style.border = "2px solid blue";
+        console.log(currentEle.value);
+        console.log(currentEle.value.length);
+        
     }
-
-    suqreNo();
-
 </script>

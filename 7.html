@@ -1,16 +1,23 @@
-<script>
-    //function name
-    function simpleInterest(amount, roi, duration){
-        console.log("amount =" + amount,"roi =" + roi, "duration =" +duration);
-        
-        si = amount*roi*duration/100;
-        console.log("Simple Interest = " + si);
+<!-- // condition on checkbox -->
 
-        totalValue = amount + si;
-        console.log("Total Amount = " + totalValue);
+<input type="checkbox" onchange="myfunc(this)">
+
+<p>
+    On check Show and hide div  On check Show and hide div  On check Show and hide div 
+    On check Show and hide div  On check Show and hide div  On check Show and hide div 
+    On check Show and hide div  On check Show and hide div  On check Show and hide div 
+    On check Show and hide div  On check Show and hide div  On check Show and hide div 
+    On check Show and hide div  On check Show and hide div  On check Show and hide div 
+</p>
+
+<script>
+    function myfunc(currentEle){
+        console.log(currentEle);
+        console.log(currentEle.checked);
+        if(currentEle.checked == true){
+            currentEle.nextElementSibling.style.display="block";
+        }else{
+            currentEle.nextElementSibling.style.display="none"
+        }
     }
-    //function call
-    simpleInterest(1000,7,10);
-    simpleInterest(5000,8,5);
-    simpleInterest(10000,7,10);
 </script>

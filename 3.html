@@ -1,11 +1,21 @@
+<!-- //how to mention id using js -->
+ 
+<input type="text" onfocus="myfunc(this)">
+
 <script>
-    function tempC(){
-        temp = 60; 
-        tempConvert = temp*9/5 + 32;
-        console.log(tempConvert);
-
-    }
-
-    tempC();
+function myfunc(currentEle){
+    console.log(currentEle);
+    currentEle.id = "sec_style"
+}
 
 </script>
+
+<style>
+    #sec_style{
+        border:1px solid gray;
+        width:500px;
+        height:50px;
+        background-color: whitesmoke;
+
+    }
+</style>
