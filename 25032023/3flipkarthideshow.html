@@ -1,0 +1,138 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+<style>
+    .small-img{
+        width: 80px;
+        padding: 5px;
+    }
+    .service{   display: flex;
+justify-content: flex-end;
+align-content: center;
+align-items: center; }
+    .question-icon{
+        border-radius: 50%;
+background-color: #fff;
+color: #878787;
+font-weight: 500;
+width: 18px;
+height: 18px;
+font-size: 12px;
+line-height: 16px;
+text-align: center;
+display: inline-block;
+border: 1px solid #e0e0e0;
+box-shadow: 0 0 1px 0 rgba(0,0,0,.2);
+vertical-align: middle;
+margin: 0 2px 0 8px;
+cursor: pointer;
+    }
+    .main-box{
+        position: relative;
+    }
+    .whitebox{
+        display: none;
+        position: fixed;
+background: transparent;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+width: 100vw;
+height: 100%;
+z-index: 1;
+    }
+    .popbox{  display: none; 
+        position: absolute;
+width: 400;
+left: -370px;
+padding: 10px;
+background: white;
+box-shadow: 1px 3px 5px gray;
+top: 30px;    
+z-index: 3; 
+    }
+    .popbox h5{font-size: 14px;}
+    .popbox p{font-size: 12px;}
+
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-1 text-center">
+            <img onmouseover="myfunc(this)" onmouseleave="leavefunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=70" alt="" class="img-fluid small-img">
+            <img onmouseover="myfunc(this)" onmouseleave="leavefunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/x/x/q/l-2-triptee-original-imagbf7k8j5zj2js.jpeg?q=70" alt="" class="img-fluid small-img">
+            <img onmouseover="myfunc(this)" onmouseleave="leavefunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/s/s/a/l-2-triptee-original-imagbf7krgghqkuu.jpeg?q=70" alt="" class="img-fluid small-img">
+            <img onmouseover="myfunc(this)" onmouseleave="leavefunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/p/2/v/l-2-triptee-original-imagbf7kxnbwy8tr.jpeg?q=70" alt="" class="img-fluid small-img">
+        </div>
+        <div class="col-xl-4">
+            <img src="" class="img-fluid" alt="" id="mainimg">
+        </div>
+        <div class="col-xl-7">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum at perferendis nisi, officiis sed quis saepe praesentium obcaecati voluptate esse animi vero ad magnam! Similique aperiam maxime natus repellat quisquam!
+
+            <div class="service">
+                <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxkZWZzPjxwYXRoIGQ9Ik0wIDEwYzAgNS41MjIgNC40NzggMTAgMTAgMTBzMTAtNC40NzggMTAtMTBTMTUuNTIyIDAgMTAgMCAwIDQuNDc4IDAgMTB6IiBpZD0iYSIvPjwvZGVmcz48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDIgMikiPjxtYXNrIGlkPSJiIiBmaWxsPSIjZmZmIj48dXNlIHhsaW5rOmhyZWY9IiNhIi8+PC9tYXNrPjxwYXRoIGZpbGw9IiMyODc0RjAiIG1hc2s9InVybCgjYikiIGQ9Ik0tNS41NTYgMjUuNTU2aDMxLjExMlYtNS41NTZILTUuNTU2eiIvPjwvZz48cGF0aCBkPSJNMTEuMDIgNy41MnMyLjI1Ni4xIDIuMjU2IDIuNjFjMCAyLjQ1LTMuMDggMi43MjQtNC4wNyAyLjc1NGEuMTIuMTIgMCAwMC0uMDg3LjJsNC4wOCA0Ljg0NU04LjY1NyA3LjUyaDYuODQ1bS02Ljg0NSAyLjYzNWg2Ljg0NSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjEuMzIiIHN0cm9rZT0iI0ZGRiIvPjwvZz48L3N2Zz4=">
+                <span>Cash On Delivery</span>
+                <div class="main-box">
+                 <span class="question-icon" onclick="showbox(this)"> ?</span>
+                 <div class="whitebox" id="whitebox" onclick="hidebox(this)"></div>
+                    <div class="popbox" id="popbox">
+                        <h5>How do I place a Cash on Delivery (C-o-D) order?</h5>
+                        <p>All items that have the 'Cash on Delivery Available' icon are valid for order by Cash on Delivery. Add the item(s) to your cart and proceed to checkout. When prompted to choose a payment option, select 'Pay By Cash on Delivery'. Enter the CAPTCHA text as shown, for validation. Once verified and confirmed, your order will be processed for shipment in the time specified, from the date of confirmation. You will be required to make a cash-only payment to our courier partner at the time of delivery of your order to complete the payment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function myfunc(el){
+         console.log(el);
+        // console.log(el.src);
+        var ans = el.src.replace("128/128", "832/832");
+        // console.log(ans);
+
+        // console.log(document.getElementById("mainimg"));
+        document.getElementById('mainimg').src = ans;
+        
+       //style hover 
+       el.style.border = "1px solid blue";
+       el.style.borderRadius = "4px";
+    }
+    function leavefunc(el){
+        console.log(el);
+        el.style.border = "0";
+       el.style.borderRadius = "0";
+    }
+
+    //show box
+    function showbox(currentEle){
+        console.log(currentEle);
+        console.log(document);
+        console.log(document.getElementById("popbox"));
+        console.log(document.getElementById("whitebox"));
+        document.getElementById("popbox").style.display = "block";
+        document.getElementById("whitebox").style.display = "block";
+        
+    }
+    function hidebox(currentEle){
+        console.log(currentEle);
+        console.log(document);
+        console.log(document.getElementById("whitebox"));
+        document.getElementById("popbox").style.display = "none";
+        document.getElementById("whitebox").style.display = "none";
+    }
+</script>
+<!-- 
+    onhover show border and hoverout hide border
+ -->
+<!-- 
+
+    https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=70
+
+    128/128 --- mouseover -- 832/832
+
+    https://rukminim1.flixcart.com/image/832/832/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=70
+    
+ -->
