@@ -1,0 +1,11 @@
+<input type="text" onfocus="myfunc(this)">
+
+<script>
+function myfunc(currentEle){
+    console.log(currentEle);
+    currentEle.style.border = "1px solid green";
+    currentEle.style.padding = "10px";
+    console.log(currentEle.value);
+    console.log(currentEle.value.length);
+}
+</script>

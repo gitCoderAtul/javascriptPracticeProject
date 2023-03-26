@@ -1,0 +1,19 @@
+<style>
+    #x1{
+        border:2px solid green;
+        padding: 5px;
+        background-color: whitesmoke;
+        width:300px;
+        border-radius: 10px;
+    }
+</style>
+<input type="text" onfocus="myfunc(this)">
+
+<script>
+    //function define
+    function myfunc(currentEle){
+        console.log(currentEle);
+        currentEle.id ="x1";
+    }
+</script>
+

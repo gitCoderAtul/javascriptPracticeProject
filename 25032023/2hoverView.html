@@ -1,0 +1,42 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xl-1 text-center">
+            <img onmouseover="myfunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=70" alt="" class="img-fluid">
+            <img onmouseover="myfunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/x/x/q/l-2-triptee-original-imagbf7k8j5zj2js.jpeg?q=70" alt="" class="img-fluid">
+            <img onmouseover="myfunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/s/s/a/l-2-triptee-original-imagbf7krgghqkuu.jpeg?q=70" alt="" class="img-fluid">
+            <img onmouseover="myfunc(this)" src="https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/p/2/v/l-2-triptee-original-imagbf7kxnbwy8tr.jpeg?q=70" alt="" class="img-fluid">
+        </div>
+        <div class="col-xl-4">
+            <img src="" class="img-fluid" alt="" id="mainimg">
+        </div>
+        <div class="col-xl-7">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum at perferendis nisi, officiis sed quis saepe praesentium obcaecati voluptate esse animi vero ad magnam! Similique aperiam maxime natus repellat quisquam!
+        </div>
+    </div>
+</div>
+
+<script>
+    function myfunc(el){
+        // console.log(el);
+        // console.log(el.src);
+        var ans = el.src.replace("128/128", "832/832");
+        // console.log(ans);
+
+        // console.log(document.getElementById("mainimg"));
+        document.getElementById('mainimg').src = ans;
+       
+    }
+</script>
+
+<!-- 
+
+    https://rukminim1.flixcart.com/image/128/128/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=70
+
+    128/128 --- mouseover -- 832/832
+
+    https://rukminim1.flixcart.com/image/832/832/kzegk280/t-shirt/l/4/k/l-2-triptee-original-imagbf7kgf3f5gum.jpeg?q=70
+    
+ -->
