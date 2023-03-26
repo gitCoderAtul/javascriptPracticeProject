@@ -1,0 +1,16 @@
+<script>
+    //function name
+    function simpleInterest(amount, roi, duration){
+        console.log("amount =" + amount,"roi =" + roi, "duration =" +duration);
+        
+        si = amount*roi*duration/100;
+        console.log("Simple Interest = " + si);
+
+        totalValue = amount + si;
+        console.log("Total Amount = " + totalValue);
+    }
+    //function call
+    simpleInterest(1000,7,10);
+    simpleInterest(5000,8,5);
+    simpleInterest(10000,7,10);
+</script>
