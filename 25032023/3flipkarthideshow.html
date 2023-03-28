@@ -53,7 +53,20 @@ z-index: 3;
     }
     .popbox h5{font-size: 14px;}
     .popbox p{font-size: 12px;}
-
+    .product { margin-top: 20px;}
+.product_heading{  display: flex; cursor: pointer;
+  justify-content: space-between;
+  align-items: center; border-top: 1px solid #c1c1c1;
+border-bottom: 1px solid #c1c1c1; padding: 10px 5px; margin-bottom: 15px;}
+  .product_heading img{width: 24px;
+height: 24px;}
+.product_details { padding: 0 10px;}
+.product_type{ flex: 0 0 30%; }
+.product_type p {color: #878787; font-weight: 500; font-size: 14px;}
+.product_category{ flex: 0 0 70%; }
+.product_more{ display: flex;  }
+.product_more p {color:blue}
+#productDetails{ display: none;  }
 </style>
 
 <div class="container">
@@ -82,13 +95,53 @@ z-index: 3;
                     </div>
                 </div>
             </div>
+
+            <div class="product">
+                <div class="product_heading" onclick="collpaseOpen(this)">
+                    <h3> Product Details  </h3>
+                    <img class="" alt="" src="https://cdn-icons-png.flaticon.com/24/748/748113.png">
+                </div>
+                <div class="product_details" id="productDetails">
+                   <div class="row">
+                        <div class="product_type">  <p>Type</p> </div>
+                        <div class="product_category">  <p>Polo Neck</p> </div>
+                   </div>
+                   <div class="row">
+                    <div class="product_type">  <p>Sleeve</p> </div>
+                    <div class="product_category">  <p>Short Sleeve</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_type">  <p>Fit</p> </div>
+                        <div class="product_category">  <p>Regular</p> </div>
+                     </div>
+                      <div class="row">   
+                        <div class="product_type">  <p>Fabric</p> </div>
+                        <div class="product_category">  <p>Poly Cotton</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_type">  <p>Sales Package</p> </div>
+                        <div class="product_category">  <p>26 Tshirt</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_type">  <p>Pack of</p> </div>
+                        <div class="product_category">  <p>1</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_type">  <p>Style Code</p> </div>
+                        <div class="product_category">  <p>BB POLO TSHIRT</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_more">  <p>Read More</p> </div> 
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>
 
 <script>
     function myfunc(el){
-         console.log(el);
+       //  console.log(el);
         // console.log(el.src);
         var ans = el.src.replace("128/128", "832/832");
         // console.log(ans);
@@ -101,7 +154,7 @@ z-index: 3;
        el.style.borderRadius = "4px";
     }
     function leavefunc(el){
-        console.log(el);
+       // console.log(el);
         el.style.border = "0";
        el.style.borderRadius = "0";
     }
@@ -123,7 +176,30 @@ z-index: 3;
         document.getElementById("popbox").style.display = "none";
         document.getElementById("whitebox").style.display = "none";
     }
+
+    function collpaseOpen(currentEle){
+        console.log(currentEle);
+        console.log(currentEle.lastElementChild);
+        console.log(currentEle.lastElementChild.src);
+       
+        let productDisplay = document.getElementById('productDetails').style.display; 
+        if( productDisplay !== "block"){ 
+            // currentEle.lastElementChild.src = "https://cdn-icons-png.flaticon.com/24/748/748113.png ";
+            currentEle.lastElementChild.src = "https://cdn-icons-png.flaticon.com/512/43/43625.png ";
+            document.getElementById('productDetails').style.display = "block";
+        }  else{
+            //currentEle.lastElementChild.src = "https://cdn-icons-png.flaticon.com/512/43/43625.png ";
+              currentEle.lastElementChild.src = "https://cdn-icons-png.flaticon.com/24/748/748113.png ";
+                document.getElementById('productDetails').style.display = "none";
+         }
+        
+    }
 </script>
+<!-- 
+    minus
+       https://cdn-icons-png.flaticon.com/512/43/43625.png 
+ -->
+
 <!-- 
     onhover show border and hoverout hide border
  -->
