@@ -64,9 +64,23 @@ height: 24px;}
 .product_type{ flex: 0 0 30%; }
 .product_type p {color: #878787; font-weight: 500; font-size: 14px;}
 .product_category{ flex: 0 0 70%; }
-.product_more{ display: flex;  }
-.product_more p {color:blue}
-#productDetails{ display: none;  }
+.product_more{ display: flex; cursor: pointer; }
+.product_more p {color:blue; }
+#productDetails, #moreDetails, #modalbox{ display: none;  }
+
+.modalbox{
+background-color: rgba(0,0,0,0.5); width: 100%; height: 100%;
+position: fixed; top: 0; left: 0; z-index: 1;
+}
+.modalbox_container{
+    width: 600px;
+height: 400px;
+background-color: white; position: absolute; top: 50%; left: 50%;
+margin-left: -300px; margin-top: -200px; background-color: white; z-index: 2;
+}
+.modalbox_header{ padding: 25px 15px;}
+.modalbox_header h2{ font-size: 18px; font-weight: 600; display: flex;
+justify-content: space-between; }
 </style>
 
 <div class="container">
@@ -130,8 +144,26 @@ height: 24px;}
                         <div class="product_type">  <p>Style Code</p> </div>
                         <div class="product_category">  <p>BB POLO TSHIRT</p> </div>
                     </div>
+                    <div class="product_moredetails" id="moreDetails">
                     <div class="row">
-                        <div class="product_more">  <p>Read More</p> </div> 
+                        <div class="product_type">  <p>Ideal For</p> </div>
+                        <div class="product_category">  <p>Men</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_type">  <p>Neck Type</p> </div>
+                        <div class="product_category">  <p>Polo Neck</p> </div>
+                    </div>
+                    <div class="row">
+                        <div class="product_type">  <p>Size</p> </div>
+                        <div class="product_category">  <p>XL</p> </div>
+                    </div>
+                    <div class="row">
+                        <p>These tshirt provides you the comfort you need with the style you want.</p>
+                        <p onclick="infoMore()" style="color:blue;cursor: pointer;">Manufacturing, Packaging and Import Info</p>
+                    </div>
+                </div>
+                    <div class="row">
+                        <div class="product_more" onclick="readMore(this)">  <p>Read More</p> </div> 
                     </div>
                 </div>
             </div>
@@ -139,6 +171,16 @@ height: 24px;}
     </div>
 </div>
 
+
+<div class="modalbox" id="modalbox" onclick="closeModal(this)">
+    <div class="modalbox_container">
+        <div class="modalbox_header">
+            <h2>Manufacturing, Packaging and Import Info <img onclick="closeModal(this)" src="https://cdn-icons-png.flaticon.com/512/2997/2997911.png" style="width:18px; height:18px; cursor: pointer;"> </h2>
+            
+        </div>  
+          
+    </div>
+</div>
 <script>
     function myfunc(el){
        //  console.log(el);
@@ -193,6 +235,21 @@ height: 24px;}
                 document.getElementById('productDetails').style.display = "none";
          }
         
+    }
+    function readMore(currentEle){
+        console.log(currentEle);
+        //moreDetails
+        currentEle.parentElement.style.display = "none";
+        document.getElementById('moreDetails').style.display = "block";
+    }
+    function infoMore(){
+            console.log(document);
+            document.getElementById('modalbox').style.display = "block";
+    }
+
+    function closeModal(currentEle){
+       console.log(currentEle); 
+        document.getElementById('modalbox').style.display = "none";
     }
 </script>
 <!-- 
