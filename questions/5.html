@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .captchaDiv{font-size: 24px;}
+        .captcha{width: 100px;
+background: whitesmoke;
+padding: 10px; text-align: center;
+height: 34px;  font-size: 28px; color: blue;}
+    </style>
+    <body>
+        <p>13) create a program to generate captcha using random number concept</p>
+        <p>14) write down a program to convert username received from prompt box into upper & lower case</p>
+        <p>15) create a program to check whether given number is odd or even ( Hint : use modulus operator with if-else control structure )</p>
+        
+        <p class="captchaDiv">Captcha : <span  id="captcha" class="captcha"> </span></p>
+        <script>
+            //question 13
+            let no1 = Math.random()*10000;
+            
+            console.log(no1);
+            console.log(Math.round(no1));
+            let captchaNumber = Math.round(no1);
+
+            document.getElementById('captcha').innerHTML = captchaNumber;
+
+
+            //question 14
+
+            //question 15
+            
+        </script>
+    </body>
+</html>
