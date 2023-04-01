@@ -1,0 +1,46 @@
+<!-- 
+    15) generate a function name calculate 
+    (Note: here you must have anonymous function instead of regular function ).
+print dummy text in console.
+a) call the same function using onblur event ( here use textbox )
+b) call the same function using onfocus event ( here use textbox )
+
+
+17)  Create a variable called x, assign the value 10
+	Create a variable called y, assign the value 20
+	Create a variable called sum, assign the sum of x&y
+	and check your answer in console
+
+21) create a variable data1 & data2 having value ajay & vijay respectively. 
+add data1 & data2 using math ( + ) 
+operator & understand the concept of concatenation operator  
+ -->
+<input onblur="myfunc()" onfocus="myfunc1()">
+
+ <script>
+    //questtion 15
+    function calculate(){
+        let txt ="demotext"
+        console.log(txt);
+    }
+    calculate();
+
+    function myfunc(){
+        console.log("blur check");
+    }
+    function myfunc1(){
+        console.log("focus check");
+    }
+
+    //question 17
+    let x = 10;
+    let y = 20;
+    let sum = x+y;
+    console.log(sum);
+
+    //question 21
+    let data1 = "ajay";
+    let data2 = "vijay";
+    console.log(data1+data2);
+
+ </script>

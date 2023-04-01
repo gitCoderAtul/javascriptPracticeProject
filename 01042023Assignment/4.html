@@ -1,0 +1,46 @@
+<!-- 
+    44) create an array having any three number. 
+    show array structure within console. print individual values also.
+
+    50) create an array with any three value . 
+    on button click add value 10 within an array (i.e at the end )
+
+51) create an array with any three value . 
+on button click add value 20 within an array (i.e at start position )
+
+52) create an array with any five value . 
+on button click remove last value
+
+53) create an array with any five value . 
+on button click remove first value
+-->
+
+<button onclick="myfunc()">Add </button>
+<button onclick="myfunc1()">Remove</button>
+
+<script>
+    //question 44
+    let arr1 = [5,40,50];
+    console.log(arr1);
+
+    //question 50
+    function myfunc(){
+        arr1.push(10);
+        console.log(arr1);
+
+        //question 51
+        // add to start position
+        arr1.unshift(200);
+        console.log(arr1);
+    }
+
+    //question 52
+    function myfunc1(){
+        arr1.pop();
+        console.log(arr1);
+
+        arr1.shift();
+        console.log(arr1);
+    }
+    
+</script>

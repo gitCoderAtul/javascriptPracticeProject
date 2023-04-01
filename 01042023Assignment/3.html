@@ -1,0 +1,53 @@
+<!-- 
+    22) create a variable data1 , store 10.90 in data1. 
+    and check the data type of data1 in console
+
+23) create two variable having values 10 & 20. & s
+how the multiplication value in alert box
+
+24) create two variable having values 10 & 20. & 
+show the division answer on browser using write() method
+
+25) there is a variable data having value as 10 . 
+find the remainder ( hint : use modulus operator)
+
+26) create a function ( name myfunc() ) and call 
+the same function on button click ( hint : within function print test data using console)
+
+27) create a function ( name myfunc() ) and call 
+the same function using keyup event using textbox 
+( hint : within function print test data using console)
+
+ -->
+<button onclick="myfunc()"> Enter</button>
+<input onkeyup="myfunc1()">
+ <script>
+    //question 22
+    let data1 = 10.90;
+    console.log(typeof data1);
+
+    //question23
+    let a = 10;
+    let b =20;
+    alert(a*b);
+
+    //question 24
+    let x = 10;
+    let y = 20;
+    ans = x /y;
+    document.write(ans);
+
+    //question 25
+    let c = 10;
+    console.log(c%2);
+
+    //question 26
+    function myfunc(){
+        console.log("Print Data");
+    }
+
+    // question 27
+    function myfunc1(){
+        console.log('keyup event');
+    }
+ </script>
