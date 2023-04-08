@@ -1,0 +1,93 @@
+<script>
+    /* Required Expression for validation symbol & meaning
+    
+    // delimeter start and end
+    [] 1 character
+    -  Range between character and number
+    () group
+    +  {1, } minumun 1 character and range start from 1 to unlimited
+    ^   caret use for restrict 1st character
+    $   doller use for restrict the last character
+    ?   optional for example date 
+    |   OR for multiple statement
+    \   escape
+    {}  for mutiple character and multiple number.
+
+
+
+    */
+
+    var pattern1 = /[a-zA-Z][a-zA-Z]/
+    console.log(pattern1);
+    console.log(pattern1.test("Om"));
+    console.log(pattern1.test("mO"));
+    console.log(pattern1.test("1W"));
+    console.log(pattern1.test("1Om"));
+
+    var pattern2 = /^[a-zA-Z][0-9][A-Z]$/
+    console.log(pattern2.test("a1Z"));
+    console.log(pattern2.test("M0sl"));
+    console.log(pattern2.test("O1k"));
+
+    var pattern3 = /^[m-zA-Z0-9]{5}$/
+    console.log(pattern3.test("vsW2D"));
+    console.log(pattern3.test("ZwD2D1"));
+    console.log(pattern3.test("vW23D"));
+
+    var pincode = /^[1-9][0-9]{5}$/
+    console.log(pincode.test("400604"), "400605");
+    console.log(pincode.test("029406"), "029406");
+    console.log(pincode.test("800283"), "800283");
+
+    var pattern_mobile = /^[6-9][0-9]{9}$/
+    console.log(pattern_mobile.test("7678212902"), "7678212902");
+    console.log(pattern_mobile.test("4982982919"), "4982982919");
+
+    //month 0? [1-9] | [1][0-2]
+    // () = group   ? = optional    | = OR
+    var pattern_Month = /^([0]?[1-9]|[1][0-2])$/
+    console.log(pattern_Month.test(9),"9");
+    console.log(pattern_Month.test(09),"09");
+    console.log(pattern_Month.test(12),"12");
+    console.log(pattern_Month.test(16),"16");
+
+    // 1-9 | 10-19 | 20-29 | 30,31
+    var pattern_Date = /^([0]?[1-9]|[1][0-9]|[2][0-9]|[3][0-1])$/
+    console.log(pattern_Date.test(05),"05");
+    console.log(pattern_Date.test(5),"5");
+    console.log(pattern_Date.test(18),"18");
+    console.log(pattern_Date.test(32),"32");
+    console.log(pattern_Date.test(30),"30");
+
+    // if we want to use double quote " in string we can use \ for escape
+    var pname = "D'suza";
+    console.log(pname);
+    //escaping character
+    var pname = "D\"suza pat\"s";
+    console.log(pname);
+
+
+    //for dob example (20)-(12)-(2002)
+    
+    //var dob = /^()\-()\-()$/
+    var dob = /^([0]?[1-9]|[1][0-9]|[2][0-9]|[3][0-1])\-([0]?[1-9]|[1][0-2])\-([0-9]{4})$/
+    console.log(dob.test("10-12-2002"),"10-12-2002");
+    console.log(dob.test("9-09-1923"),"9-09-1923");
+    console.log(dob.test("29-5-2912"),"29-5-2912");
+    console.log(dob.test("31-13-2019"),"31-13-2019");
+
+    //name min 2 character range should be unlimited
+    // + = [1,] minimun 1 character rest of unlimited
+    // ? = option 
+    //   = user space between charact give space
+    var fullName = /^[a-zA-Z]([a-zA-Z ]+)?[a-zA-Z]$/
+    console.log(fullName.test("OM"),"OM");
+    console.log(fullName.test("Om Prakash"),"Om Prakash");
+    console.log(fullName.test("oM Prakash PatilS"),"oM Prakash PatilS");
+    console.log(fullName.test(" Om prakash pAtils")," Om prakash pAtils");
+</script>
+
+<form>
+    <input type="text" placeholder="Enter Name" required pattern="^[a-zA-Z]([a-zA-Z ]+)?[a-zA-Z]$">
+    <button>Submit</button>
+</form>
