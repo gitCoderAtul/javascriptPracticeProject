@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .class1{
+        font-size:36px;
+    }
+    .class2{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <ul id="brandList"></ul>
+    <button onclick="myfunc()">Enter</button>
+
+    <script>
+        function myfunc(){
+            var brands = ['nike','puma','addidas'];
+            //console.log(document);
+            //console.log(typeof document);
+            console.log(brands);
+            //console.log( document.createElement('li')); 
+            var liTag1 = document.createElement('li');
+            var liTag2 = document.createElement('li');
+            var liTag3 = document.createElement('li');
+
+            console.log(liTag1.innerHTML = brands[0]);
+            console.log(liTag2.innerHTML = brands[1]);
+            console.log(liTag3.innerHTML = brands[2]);
+
+            liTag1.innerHTML = brands[0];
+            liTag2.innerHTML = brands[1];
+            liTag3.innerHTML = brands[2];
+
+            console.log(document.getElementById('brandList'));
+            //console.log(document.getElementById('brandList').append = liTag1);
+            //console.log(document.getElementById('brandList').append = liTag2);
+            //console.log(document.getElementById('brandList').append = liTag3);
+
+            document.getElementById('brandList').append(liTag1);
+            document.getElementById('brandList').append(liTag2);
+            document.getElementById('brandList').append(liTag3);
+
+
+
+          
+        }
+    </script>
+</body>
+</html>
