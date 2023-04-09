@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .class1{
+        font-size:36px;
+    }
+    .class2{
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <h1 id="x1">Heloo</h1>
+    <p>test</p>
+    <h2 id="x2">Hello world</h2>
+    <button onclick="myfunc()">Enter</button>
+
+    <script>
+        function myfunc(){
+            //console.log(document);
+            //console.log(typeof document);
+            console.log( document.body);
+            console.log(document.body.style);
+            document.body.style.background = "whitesmoke";
+
+            console.log(document.getElementById('x1'));
+            document.getElementById('x1').style.fontSize = "36px";
+            document.getElementById('x1').style.color = "blue";
+
+
+            console.log(document.getElementById('x2'));
+            document.getElementById('x2').className = "class1 class2";
+            document.getElementById('x2').innerHTML = "hello world change to my world";
+
+        }
+
+        /*
+            DOM methods
+            getElementById
+
+            DOM Properties
+            style
+            innerHTML
+            className
+
+        */
+    </script>
+</body>
+</html>
