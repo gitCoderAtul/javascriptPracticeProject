@@ -1,0 +1,15 @@
+<script>
+    function calculateDiscount(amount,b)
+    {
+        console.log('Func Called');
+        console.log(amount);
+        console.log(b);
+
+        discount = amount * b/100;
+        console.log(discount);
+        finalPrice = amount - discount;
+        console.log(finalPrice);
+    }
+</script>
+
+<button onclick="calculateDiscount(10000,30)">Enter</button>

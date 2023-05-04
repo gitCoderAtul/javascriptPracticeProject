@@ -1,0 +1,17 @@
+<input type="text" onfocus="myfunc(this)" />
+
+<script>
+    function myfunc(xyz){
+        console.log('Focus Working');
+        console.log(xyz);
+        xyz.style.border = "3px solid green";
+        xyz.style.width="250px";
+        xyz.style.height="50px";
+        xyz.style.paddingLeft = "30px";
+        xyz.style.textTransform = "uppercase";
+
+        console.log(xyz.value);
+        console.log(xyz.value.length);
+        
+    }
+</script>

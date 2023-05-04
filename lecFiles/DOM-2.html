@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .myclass1{
+            font-size: 40px;
+        }
+        .myclass2{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <ul id="x1"></ul>
+    <button onclick="myfunc()">Enter</button>
+
+    <script>
+        function myfunc(){
+            var brands = ['Nike','Puma','Zara'];
+            console.log(brands);
+            // console.log(document);
+            var liTag1 = document.createElement('li');
+            // console.log(liTag1 , typeof liTag1);
+            var liTag2 = document.createElement('li');
+            // console.log(liTag2 , typeof liTag2);
+            var liTag3 = document.createElement('li');
+            // console.log(liTag3 , typeof liTag3);
+
+            liTag1.innerText = brands[0];
+            liTag2.innerText = brands[1];
+            liTag3.innerText = brands[2];
+
+            // console.log(typeof document.getElementById('x1'));
+            // console.log(document.getElementById('x1'));
+
+            document.getElementById('x1').append(liTag1);
+            // document.getElementById('x1').innerHTML = liTag1;
+            document.getElementById('x1').append(liTag2);
+            document.getElementById('x1').append(liTag3);
+        }
+    </script>
+</body>
+</html>

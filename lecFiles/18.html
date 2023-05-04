@@ -1,0 +1,76 @@
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+
+<style>
+    .container{
+        line-height: 2;
+        font-size: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    .blackbox{
+        position: fixed;
+        left: 0;top: 0;
+        width: 100%;height: 100%;
+        background: rgba(0,0,0,0.5);
+        z-index: 1;
+        display: none;
+    }
+    .modalbox{
+        position: fixed;
+        left: 50%;top: 50%;
+        width: 800px;height: 500px;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 1px 2px 4px black;
+        z-index: 2;
+        margin-left: -400px;
+        margin-top: -250px;
+        display: none;
+
+    }
+</style>
+
+<div class="blackbox" id="blackbox" onclick="hidebox()"></div>
+<div class="modalbox" id="modalbox">
+    <button onclick="hidebox()">Close</button>
+</div>
+
+<div class="container">
+    <button class="btn btn-dark" onclick="myfunc()">Open Box1</button>
+    <button class="btn btn-dark" onclick="myfunc()">Open Box2</button>
+</div>
+
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est neque praesentium impedit recusandae ducimus sunt, accusamus consequuntur mollitia, ipsam laborum repudiandae ullam, nisi at obcaecati corrupti? Reprehenderit voluptatum doloremque est.
+</div>
+
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est neque praesentium impedit recusandae ducimus sunt, accusamus consequuntur mollitia, ipsam laborum repudiandae ullam, nisi at obcaecati corrupti? Reprehenderit voluptatum doloremque est.
+</div>
+
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est neque praesentium impedit recusandae ducimus sunt, accusamus consequuntur mollitia, ipsam laborum repudiandae ullam, nisi at obcaecati corrupti? Reprehenderit voluptatum doloremque est.
+</div>
+
+<div class="container">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est neque praesentium impedit recusandae ducimus sunt, accusamus consequuntur mollitia, ipsam laborum repudiandae ullam, nisi at obcaecati corrupti? Reprehenderit voluptatum doloremque est.
+</div>
+
+
+
+<script>
+    function myfunc(){
+        // console.log(document);
+        // console.log(document.getElementById("blackbox"));
+        // console.log(document.getElementById("modalbox"));
+
+        document.getElementById("blackbox").style.display = "block";
+        document.getElementById("modalbox").style.display = "block";
+    }
+
+    function hidebox(){
+        // console.log('Func Called');
+        document.getElementById("blackbox").style.display = "none";
+        document.getElementById("modalbox").style.display = "none";
+    }
+</script>

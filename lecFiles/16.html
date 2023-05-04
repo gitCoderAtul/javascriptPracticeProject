@@ -1,0 +1,15 @@
+<h2 onclick="myfunc(this)">Product Details</h2>
+<p  style="display: none;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, nostrum. Dolorem cumque perspiciatis corporis minus voluptate quia deserunt exercitationem, nobis natus. Modi, sunt eos. Unde voluptatibus praesentium tenetur. Nisi, sit!
+</p>
+
+<script>
+    function myfunc(curEle){
+        console.log('Func Called');
+        console.log(curEle);
+        console.log(curEle.nextElementSibling);
+
+        curEle.nextElementSibling.style.display = 'block';
+        
+    }
+</script>

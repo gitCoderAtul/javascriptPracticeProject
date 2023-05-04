@@ -1,0 +1,20 @@
+<input type="checkbox" onchange="myfunc(this)" />
+<p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quia consequatur culpa sequi. Tenetur consequatur eius obcaecati, nobis error ipsum cupiditate quo unde nesciunt, nemo dolore eaque, adipisci non vero?
+</p>
+
+
+<script>
+    function myfunc(curele){
+        console.log(curele);
+        console.log(curele.checked); //true or false
+        console.log(curele.nextElementSibling);
+
+        if(curele.checked == true){
+            curele.nextElementSibling.style.display = "block";
+        }
+        else{
+            curele.nextElementSibling.style.display = "none";
+        }
+    }
+</script>

@@ -1,0 +1,14 @@
+<select onchange="myfunc(this)">
+    <option value="1"> Nike </option>
+    <option value="2"> Adidas </option>
+    <option value="3"> Puma </option>
+</select>
+
+<input type="file" onchange="myfunc(this)"/>
+
+<script>
+    function myfunc(rec){
+        console.log(rec);
+        console.log(rec.value);
+    }
+</script>

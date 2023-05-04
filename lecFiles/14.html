@@ -1,0 +1,20 @@
+<p onmouseover="myfunc(this)">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum debitis quas dignissimos ratione perspiciatis dolore esse numquam, vero corporis nulla nam ex voluptatum in, consequatur architecto at, aliquid possimus nihil.
+</p>
+
+<style>
+    .m1{
+        border:solid;
+    }
+    .m2{
+        background-color: gray;
+    }
+</style>
+
+<script>
+    function myfunc(rec)
+    {   
+        console.log(rec);
+        rec.className = "m1 m2";
+    }
+</script>

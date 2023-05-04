@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .myclass1{
+            font-size: 40px;
+        }
+        .myclass2{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="x1">Hello</h1>
+    <p>TEST</p>
+    <h2 id="x2">HELLO WORLD</h2>
+    <button onclick="myfunc()">Enter</button>
+
+    <script>
+        function myfunc(){
+            // console.log(typeof document);
+            // console.log(document);
+            // console.log(typeof document.body);
+            // console.log(document.body);
+            // console.log(document.body.style);
+
+            document.body.style.background = 'gray';
+
+            // #x1{}
+            // getElementById() //DOM Selector Method
+            // console.log(document.getElementById("x11"));
+            // console.log(document.getElementById("x1"));
+            // console.log(typeof document.getElementById("x1"));
+
+            document.getElementById('x1').style.fontSize = '80px';
+            document.getElementById('x1').innerText = 'Hello World';
+
+            // console.log(typeof document.getElementById('x2'));
+            // console.log(document.getElementById('x2'));
+
+            document.getElementById('x2').className = 'myclass1 myclass2';
+
+            /*
+                DOM Methods:
+                getElementById()
+
+                DOM Properties:
+                className
+                style
+                innerText
+            */
+        }
+    </script>
+</body>
+</html>

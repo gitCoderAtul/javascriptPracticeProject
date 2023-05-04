@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .myclass1{
+            font-size: 40px;
+        }
+        .myclass2{
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="myfunc()">Enter</button>
+    <table id="x1" border="1" align="center" width="600"></table>
+
+    <script>
+        function myfunc(){
+            var colors = ['blue','gray','green','red','cyan'];
+            var brands = ['nike','puma','zara','adidas','jio'];
+            
+            var i=0;
+            while(i<=4)
+            {   
+                // console.log(i , colors[i]);
+                var trTag = document.createElement('tr');
+              
+                var tdTag1 = document.createElement('td');
+                var tdTag2 = document.createElement('td');
+
+                tdTag1.innerHTML = brands[i];
+                tdTag2.innerHTML = 'world';                                                     
+                trTag.append(tdTag1);
+                trTag.append(tdTag2);
+                
+                trTag.style.background = colors[i];
+                document.getElementById('x1').append(trTag);
+                
+                i=i+1;
+            }  
+        }
+    </script>
+</body>
+</html>
