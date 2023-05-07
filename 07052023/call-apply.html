@@ -1,0 +1,44 @@
+<script>
+//concept
+//object mapping
+//object to object access
+
+//within an object how to call value
+
+const userInfo = {
+    name:'john',
+    age: 30,
+
+    //function refer
+    show: function(){
+        console.log('func called');
+        // console.log(this);
+        console.log(this.name);
+        console.log(this.age);
+    }
+}
+
+console.log(userInfo);
+userInfo.show();
+
+//out side object
+
+const userInfo1 = {
+    name:'john',
+    age: 20
+}
+const record = {
+    show:function(place,role){
+        
+        console.log('func 2 cal');
+        console.log(this);
+        console.log(this.name,this.age, place, role);
+    }
+}
+
+record.show.call(userInfo1, "Mumai", "Developer")
+
+// The call() method takes arguments separately.
+//The apply() method takes arguments as an array.
+
+</script>

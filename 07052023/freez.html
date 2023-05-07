@@ -1,0 +1,31 @@
+<script>
+
+// freez method is use you dont want to change value in const object or array.
+    const uname = 'amar';
+    console.log(uname);
+
+    const userInfo = {name:'atul', age:20};
+    console.log(userInfo);
+    console.log(userInfo.name);
+    console.log(userInfo.age);
+
+    Object.freeze(userInfo);
+
+    userInfo.name = 'ajay';
+    userInfo.age = 21;
+    console.log(userInfo); 
+    console.log(userInfo.name);
+    console.log(userInfo.age);
+
+    const brands = ['nike','puma'];
+    console.log(brands);
+    console.log(brands[0]);
+
+    Object.freeze(brands);
+    console.log('-----freez method------')
+    
+    brands[0] = 'adidas';
+    console.log(brands);;
+    console.log(brands[0]); 
+    
+</script>

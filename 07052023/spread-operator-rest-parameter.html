@@ -1,0 +1,32 @@
+<script>
+
+    //sperad operator use to combine array value
+    var userInfo1 = ['atul', 'ajay'];
+    var userInfo2 = ['amar', 'raj'];
+
+    // var user = [userInfo1,userInfo2];
+    var user = [...userInfo1,...userInfo2];
+
+    console.log(user);
+
+    var info1 = {name:'akshay', age:20};
+    var info2 = {role:'developer'};
+
+    // var info = {info1,info2};
+    var info = {...info1,...info2};
+
+    console.log(info);
+
+    ///////// rest paratmeter user to combine all paramenter in function
+    function myfunc(...values){
+        console.log(values);
+    }
+    function myfunc(a1,a2,...values){
+        console.log(a1,a2);
+        console.log(values);
+    }
+
+    myfunc('nike','puma','zara','adidas')
+
+
+</script>
