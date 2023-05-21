@@ -1,0 +1,17 @@
+<script>
+//callbackfuction
+function apiCall(data, callback){
+    console.log(data);
+    var ans = data[0] + data[1] + data[2];
+    console.log(typeof callback);
+   callback(ans);
+
+    }
+
+    //arrow function
+
+    apiCall([10,20,30], (result)=>{
+        console.log("called", result);
+    });
+
+</script>
