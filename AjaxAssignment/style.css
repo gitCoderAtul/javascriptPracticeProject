@@ -1,0 +1,39 @@
+body{
+    background-color: #282c34;
+}
+header{
+    background-color: #343a3f;
+    color: whitesmoke;
+    box-shadow: 2px 5px 5px #282828;
+}
+.logo{
+    font-size: 1.6rem;
+padding: 5px 15px;
+margin: 0;
+}
+nav{display: flex; justify-content: right;}
+nav ul {
+    display: flex;
+    list-style: none; padding: 0; margin: 0;
+}
+nav ul li {
+    padding: 5px 15px;
+}
+nav ul li:hover {
+ cursor: pointer;
+}
+.search-box{
+    padding: 5px 15px;
+}
+.btn-search{    
+    border: none;
+    background: #929ea8;  padding: 2px 15px;  border-radius: 3px;  color: whitesmoke;}
+
+.title{
+    font-size: 20px;
+height: 48px;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+}    

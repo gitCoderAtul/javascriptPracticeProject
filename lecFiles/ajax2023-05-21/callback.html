@@ -1,0 +1,14 @@
+<script>
+    function apicall(data , cb){
+        var ans = data[0]+data[1]+data[2];
+        console.log(typeof cb);
+        cb(ans);
+    }
+
+    apicall([10,20,30] , (result)=>{
+        console.log('called',result);
+    })
+    apicall([100,200,300] , (result)=>{
+        console.log('called',result);
+    })
+</script>

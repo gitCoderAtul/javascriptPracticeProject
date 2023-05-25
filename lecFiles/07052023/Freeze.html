@@ -1,0 +1,26 @@
+<script>
+    const uname = 'Amar';
+    console.log(uname);
+    // const uname = 'Amar Shah';
+
+    const userinfo = {name:"Atul",age:20}
+    console.log(userinfo);
+    console.log(userinfo.name);
+    console.log(userinfo.age);
+
+    Object.freeze(userinfo);
+
+    userinfo.name = 'Ajay';
+    userinfo.age = 21;
+    console.log(userinfo);
+    console.log(userinfo.name);
+    console.log(userinfo.age);
+
+    const brands = ['nike','puma'];
+    console.log(brands);
+
+    Object.freeze(brands);
+    brands[0] = 'Zara';
+    console.log(brands);
+
+</script>

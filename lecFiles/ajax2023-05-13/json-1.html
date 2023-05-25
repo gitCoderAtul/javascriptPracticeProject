@@ -1,0 +1,30 @@
+<script>
+    var productinfo = {
+        name:"Shirt",
+        price:1000,
+        brands:["nike",'adidas'],
+        colors:['blue','black'],
+        status:true,
+        info:{
+            desc:"hello",
+            measurement:"test"
+        }
+    }
+
+    console.log(typeof productinfo);
+    console.log(productinfo);
+
+    var ans = JSON.stringify(productinfo);
+    console.log(ans);
+    console.log(typeof ans);
+</script>
+
+
+<script>
+    var userinfo = '{"name":"akshay","age":20,"hobbies":["swimming","cricket"]}';
+    console.log(userinfo,typeof userinfo);
+
+    var ans = JSON.parse(userinfo);
+    console.log(ans,typeof ans);
+
+</script>

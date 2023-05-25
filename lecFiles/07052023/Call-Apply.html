@@ -1,0 +1,30 @@
+<script>
+    const userinfo = {
+        name:"Atul",
+        age:20,
+        show:function(){
+            console.log('Func Called');
+            // console.log(this);
+            console.log(this.name);
+            console.log(this.age);
+        }
+    }
+
+    console.log(userinfo);
+    userinfo.show();
+
+    const userinfo1 = {
+        name:"Atul",
+        age:20
+    }
+
+    const record = {
+        show:function(place,role){
+            console.log('func called');
+            console.log(this);
+            console.log(this.name , this.age,place,role);
+        }
+    }
+
+    record.show.call(userinfo1 , "Mumbai","Developer");
+</script>

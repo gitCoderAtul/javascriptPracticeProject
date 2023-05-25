@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Movie DB</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h1 class="logo">Movie DB</h1>    
+                </div>
+                <div class="col-md-8">
+                    <nav>
+                        <ul>
+                            <li>Popular </li>
+                            <li>Top Rated</li>
+                            <li>UpComing</li>
+                        </ul>
+                        <div class="search-box">
+                            <input type="text" placeholder="Movie Name">
+                            <button class="btn-search">Search</button>
+                        </div>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row" id="movieList">
+
+            </div>
+        </div>
+    </section>
+    <script src="ajax.js"></script>
+</body>
+</html>

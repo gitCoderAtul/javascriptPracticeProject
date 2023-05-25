@@ -1,0 +1,18 @@
+<script>
+    var userinfo1 = ['atul','ajay'];
+    var userinfo2 = ['amar','prem'];
+    var users = [...userinfo1,...userinfo2];
+    console.log(users);
+
+    var info1 = {name:"Akshay",age:20};
+    var info2 = {role:"developer"};
+
+    var info = {...info1,...info2}
+    console.log(info);
+
+    function myfunc(a1,...values){
+        console.log(a1);
+        console.log(values);
+    }
+    myfunc('nike','zara','puma','adidas')
+</script>

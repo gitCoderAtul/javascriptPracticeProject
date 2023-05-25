@@ -1,0 +1,16 @@
+<script>
+    const userinfo1 = {
+        name:"Atul",
+        age:20
+    }
+
+    const record = {
+        show:function(place,role,degree){
+            console.log('func called');
+            console.log(this);
+            console.log(this.name , this.age,place,role,degree);
+        }
+    }
+
+    record.show.apply(userinfo1 , ["Mumbai","Developer","BSC"]);
+</script>
