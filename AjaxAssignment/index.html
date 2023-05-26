@@ -22,13 +22,13 @@
                 <div class="col-md-8">
                     <nav>
                         <ul>
-                            <li>Popular </li>
-                            <li>Top Rated</li>
-                            <li>UpComing</li>
+                            <li id="popular">Popular </li>
+                            <li id="topRated">Top Rated</li>
+                            <li id="upComing">UpComing</li>
                         </ul>
                         <div class="search-box">
-                            <input type="text" placeholder="Movie Name">
-                            <button class="btn-search">Search</button>
+                            <input type="text" id="txtSearch" placeholder="Movie Name">
+                            <button class="btn-search" id="btnSearch">Search</button>
                         </div>
                     </nav>
                 </div>
@@ -44,6 +44,12 @@
             </div>
         </div>
     </section>
+    <div id="modalPopUp">
+        
+        <div class="modalDiv">
+            
+        </div>
+    </div>
     <script src="ajax.js"></script>
 </body>
 </html>

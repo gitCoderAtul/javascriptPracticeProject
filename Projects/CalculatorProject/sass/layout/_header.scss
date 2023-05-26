@@ -1,0 +1,29 @@
+header{
+    background-color: $header-primary;
+    .header{
+        display: flex; width: 90%; justify-content: space-between; margin: auto;
+        .logo{
+            margin: 0; padding: 0;
+            h1{
+                margin: 0; padding: 10px;   font-size: 1.8rem;
+             }
+        }
+        .navbar{
+            flex: 0 0 40%;  align-self: center;
+            &_list{
+                display: flex; list-style: none; justify-content: space-around;
+                margin:0; padding: 0;
+                li{
+                    a{
+                        font-size: 1.2rem;
+                        text-decoration: none;
+                        color: $color-black;
+                        &:hover,&:active{
+                            color: $color-red;
+                        }   
+                    }
+                }
+            }
+        }
+    }
+}

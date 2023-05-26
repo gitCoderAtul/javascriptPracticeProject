@@ -1,0 +1,12 @@
+.cal_row{
+    display: flex; width: 90%;
+    margin: auto;
+    .cal_sec{
+        margin-top: 10px;
+        flex-basis: 50%;
+        background-color: $color-red;
+        box-shadow: $box-shadow;
+        height: 200px;
+        
+    }
+}

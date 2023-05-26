@@ -1,0 +1,11 @@
+@import 'abstract/mixins';
+@import 'abstract/variables';
+//base
+@import 'base/reset.scss';
+//component
+@import 'component/buttons.scss';
+//layout
+@import 'layout/header';
+@import 'layout/footer';
+//page
+@import 'page/home';
