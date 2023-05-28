@@ -1,0 +1,24 @@
+<script>
+    var rec = new Promise((res,rej)=>{
+        console.log(typeof res, typeof rej);
+         res(['men','women','kids']);
+        // rej({msg:"page not found"})
+        
+    });
+    console.log(typeof rec);
+    console.log(rec);
+
+    rec
+    .then((val)=>{
+        console.log("resolved");
+        console.log(val);
+    })
+    .catch((err)=>{
+        console.log("error");
+        console.log(err);
+    })
+    .finally(()=>{
+        console.log("lets begin other task");
+    })
+
+</script>
