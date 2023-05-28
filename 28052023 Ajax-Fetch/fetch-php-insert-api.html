@@ -1,0 +1,43 @@
+<!-- 
+AllUsers:- https://omkaritsolutions.co.in/CRMAppointment/user/
+Insert:- https://omkaritsolutions.co.in/CRMAppointment/register
+GetUserDetailsById :- https://omkaritsolutions.co.in/CRMAppointment/user/edit/1
+Update:- https://omkaritsolutions.co.in/CRMAppointment/user/update/4
+Delete:- https://omkaritsolutions.co.in/CRMAppointment/user/delete/6 -->
+<button> Insert </button>
+<script>
+document.querySelector('button').onclick = function(){
+
+var dataObject ={
+    name: "Attudi",
+    email_id: "atul@gmail.com",
+    mobile_no: 8644420390,
+    user_pwd:"Hellp1@2",
+    user_type: 1
+    
+}
+console.log(dataObject);
+// console.log(JSON.stringify(dataObject));
+
+var dataInsert = JSON.stringify(dataObject);
+console.log(dataInsert);
+
+apiPath = 'https://omkaritsolutions.co.in/CRMAppointment/register';
+
+var api = fetch(apiPath,{
+    method:'post',
+    body:dataInsert,
+    headers:{'Content-type':'application/JSON'}
+});
+console.log(api); 
+
+api.then(res=>{
+    console.log(res);
+    console.log(res.json());
+    res.json()
+}).then(val=>{
+        console.log(val);
+    })
+
+}
+</script>

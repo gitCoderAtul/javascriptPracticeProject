@@ -1,0 +1,20 @@
+<!-- 
+AllUsers:- https://omkaritsolutions.co.in/CRMAppointment/user/
+Insert:- https://omkaritsolutions.co.in/CRMAppointment/register
+GetUserDetailsById :- https://omkaritsolutions.co.in/CRMAppointment/user/edit/1
+Update:- https://omkaritsolutions.co.in/CRMAppointment/user/update/4
+Delete:- https://omkaritsolutions.co.in/CRMAppointment/user/delete/6 -->
+
+<script>
+var api = fetch('https://omkaritsolutions.co.in/CRMAppointment/user/');
+console.log(api);
+
+api.then(res=>{
+    console.log(res);
+    res.json().then(val=>{
+        console.log(val);
+    })
+})
+
+
+</script>
