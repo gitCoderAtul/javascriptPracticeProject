@@ -1,0 +1,12 @@
+<script>
+    var ans = fetch("https://fakestoreapi.com/products/categories");
+    console.log(ans);
+
+    ans.then(res=>{
+         console.log(res);
+        res.json().then(val=>{
+            console.log(val);
+        })
+    })
+
+</script>
