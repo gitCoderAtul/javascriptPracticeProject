@@ -1,0 +1,33 @@
+<script>
+    var rec = new Promise((res,rej)=>{
+        var xmlhttp = new XMLHttpRequest();
+       console.log(xmlhttp);
+ 
+        xmlhttp.onreadystatechange = function() {
+            console.log(xmlhttp.readyState,xmlhttp.status);
+
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                console.log(xmlhttp.responseText);
+                var record = JSON.parse(xmlhttp.responseText);
+                res(record);
+            }
+            else if(xmlhttp.readyState ==4 && xmlhttp.status == 404){
+                rej(xmlhttp.statusText);
+            }
+           
+        }
+        xmlhttp.open('get', 'https://fakestoreapi.com/products/categories');
+        xmlhttp.send();
+    });
+
+    rec
+    .then(result=>{
+        console.log("fullfilled");
+          console.log(result);
+    })
+    .catch(result=>{
+        console.log("error");
+        console.log(err);
+    })
+
+</script>
