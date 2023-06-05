@@ -1,0 +1,25 @@
+<script>
+    function myfunc(){
+        return ()=>{
+            return 100;
+        }
+    }
+
+    var ans = myfunc()
+    var fans = ans();
+    console.log(fans);
+
+    var result = myfunc()();
+    console.log(result);
+
+    function myfunc1(){
+        return()=>{
+            return ()=>{
+                return 101;
+            }
+        }
+    }
+
+    var op = myfunc1()()();
+    console.log(op);
+</script>

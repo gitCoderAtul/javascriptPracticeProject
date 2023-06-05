@@ -1,0 +1,27 @@
+<script>
+    // fetch('https://fakestoreapi.com/products/categories')
+    // .then(res=>res.json())
+    // .then(val=>console.log(val));
+</script>
+
+<button>Enter</button>
+<input type="text" id="txt">
+
+<div class="container">
+    <div class="row"></div>
+</div>
+
+<script>
+
+    document.querySelector('button').onclick=function(){
+        var txtData = document.getElementById('txt').value;
+        // console.log(txtData);
+        var api = `https://fakestoreapi.com/products/category/${txtData}`;
+        // console.log(api);
+        fetch(api)
+        .then(res=>res.json())
+        .then(val=>{
+            console.log(val);
+        })
+    }
+</script>

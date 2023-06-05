@@ -1,0 +1,30 @@
+<button>Add</button>
+
+<script>
+    document.querySelector('button').onclick=function(){
+        var apipath=`https://omkaritsolutions.co.in/CRMAppointment/register`;
+        // console.log(apipath);
+
+        var dataForInsert = {
+            email_id:"atul@gmail.com",
+            mobile_no:9820098200,
+            name:"Atul",
+            user_pwd:"Helo@123",
+            user_type:1
+        }
+
+        console.log(dataForInsert);
+        dataForInsert = JSON.stringify(dataForInsert);
+        console.log(dataForInsert);
+
+        fetch(apipath ,{
+            method:"post",
+            body:dataForInsert,
+            headers:{'Content-Type':'application/JSON'}
+        })
+        .then(res=>res.json())
+        .then(val=>{
+            console.log(val);
+        })
+    }
+</script>

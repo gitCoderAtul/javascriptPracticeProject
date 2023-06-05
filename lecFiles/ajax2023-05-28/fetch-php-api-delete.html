@@ -1,0 +1,17 @@
+<button>Delete</button>
+
+<script>
+    document.querySelector('button').onclick=function(){
+        var apipath=`https://omkaritsolutions.co.in/CRMAppointment/user/delete/114`;
+        // console.log(apipath);
+
+
+        fetch(apipath ,{
+            method:"delete"
+        })
+        .then(res=>res.json())
+        .then(val=>{
+            console.log(val);
+        })
+    }
+</script>

@@ -1,0 +1,30 @@
+<button>Update</button>
+
+<script>
+    document.querySelector('button').onclick=function(){
+        var apipath=`https://omkaritsolutions.co.in/CRMAppointment/user/update/114`;
+        // console.log(apipath);
+
+        var dataForInsert = {
+            email_id:"atulpatil@gmail.com",
+            mobile_no:9820098200,
+            name:"Atul Patil",
+            user_pwd:"Helo@123",
+            user_type:1
+        }
+
+        console.log(dataForInsert);
+        dataForInsert = JSON.stringify(dataForInsert);
+        console.log(dataForInsert);
+
+        fetch(apipath ,{
+            method:"put",
+            body:dataForInsert,
+            headers:{'Content-Type':'application/JSON'}
+        })
+        .then(res=>res.json())
+        .then(val=>{
+            console.log(val);
+        })
+    }
+</script>

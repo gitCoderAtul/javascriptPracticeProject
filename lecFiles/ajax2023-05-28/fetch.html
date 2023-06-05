@@ -1,0 +1,22 @@
+<script>
+    // var rec = new Promise(function(res,rej){
+    //     // res("Completed Task")
+    //     rej("Task Fail")
+    // });
+
+    // rec.then(val=>{
+    //     console.log(val);
+    // }).catch(err=>{
+    //     console.log(err);
+    // })
+
+
+    var ans = fetch("https://fakestoreapi.com/products/categories")
+    // console.log(ans);
+    ans.then(res=>{
+        // console.log(res.json());
+        res.json().then(val=>{
+            console.log(val);
+        });
+    });
+</script>

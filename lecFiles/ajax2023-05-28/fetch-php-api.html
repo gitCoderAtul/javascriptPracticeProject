@@ -1,0 +1,14 @@
+<button>GET</button>
+
+<script>
+    document.querySelector('button').onclick=function(){
+        var apipath=`https://omkaritsolutions.co.in/CRMAppointment/user/`;
+        // console.log(apipath);
+
+        fetch(apipath)
+        .then(res=>res.json())
+        .then(val=>{
+            console.log(val);
+        })
+    }
+</script>

@@ -1,0 +1,23 @@
+<script>
+    var rec = new Promise((res,rej)=>{
+        // console.log(typeof res, typeof rej);
+        res(['men','women','kids'])
+        // rej({msg:"Page Not Found"})
+    });
+
+    console.log(typeof rec);
+    console.log(rec);
+
+    rec
+    .then(val=>{
+        console.log("Resolved");
+        console.log(val);
+    })
+    .catch(err=>{
+        console.log("Erorr ");
+        console.log(err);
+    })
+    .finally(()=>{
+        console.log('Lets Begin other task');
+    })
+</script>
