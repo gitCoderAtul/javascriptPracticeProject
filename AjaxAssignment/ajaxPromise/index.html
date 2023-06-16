@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+         #modalPopUp{
+    background-color: rgb(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+.modalDiv{
+    width: 80%;
+    --width:80%;
+    background-color: #020b17;
+    min-height: calc(var(--width) - 100px);
+    position: relative;
+    padding: 50px 15px 15px;
+    left: 10%;
+    top: 15%;
+    border-radius: 5px;
+    box-shadow: 3px 5px 5px rgb(0, 0, 0, 0.5);
+    border: 1px solid #333131;
+}
+
+    .drink-section{width: 100%; display: flex; background: #f7f7f7;
+padding: 20px 20px; margin-bottom: 20px; border-radius: 5px; height: calc(100% - 20px);
+flex-wrap: wrap; }
+    .drink-image{flex-basis: 40%;}
+    .drink-image img{width: 100%;}
+    .drink-details{flex-basis: 60%; padding-left: 15px;} 
+    .drink-details p {margin-bottom: 5px;}
+</style>
+<body>
+    <h1>Promise Javascript</h1>
+<div class="container">
+    <div class="row" id="drinkDetail">
+
+    </div>
+</div>
+
+<div id="modalPopUp"> 
+    <div class="modalDiv">
+        
+    </div>
+</div>
+
+    <script src="promise.js"></script>
+</body>
+</html>

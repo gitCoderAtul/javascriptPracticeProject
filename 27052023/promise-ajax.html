@@ -23,7 +23,10 @@
     rec
     .then(result=>{
         console.log("fullfilled");
-          console.log(result);
+          console.log(typeof result ,result);
+          result.forEach(obj =>{
+            console.log(obj);
+          })
     })
     .catch(result=>{
         console.log("error");
