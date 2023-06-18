@@ -1,0 +1,44 @@
+<script>
+   // console.log(this);
+    // this.alert();
+    // window.alert();
+</script>
+
+<script>
+    // function myfunc(){
+    //     console.log(this);
+    // }
+    // myfunc();
+</script>
+
+<script>
+    var user = {
+        name: "John",
+        age:20,
+        info:function(){
+            console.log("In Anoymous Func");
+         console.log(this);   
+        },
+        info1:()=>{
+            console.log("In arrow Func");
+            console.log(this);
+        }
+    }
+    console.log(user);
+    user.info();
+    user.info1();
+</script>
+
+<button id="btn1">Enter</button>
+<button id="btn2">Enter</button>
+
+<script>
+document.querySelector('#btn1').onclick = function(){
+    console.log(this);
+}
+
+document.querySelector('#btn2').onclick = ()=>{
+    console.log(this);
+}
+
+</script>
