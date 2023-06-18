@@ -2,6 +2,14 @@ var rec = new Promise((res,rej)=>{
     var xmlhttp = new XMLHttpRequest();
     console.log(xmlhttp);
 
+    // function fetchdata(apiPath,callback){
+    //     var xmlhttp = new XMLHttpRequest();
+    //     xmlhttp.open('GET',apiPath)
+    //     xmlhttp.onreadystatechange = function(){
+
+    //     }
+    // }
+    xmlhttp.open('GET','https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
     xmlhttp.onreadystatechange = function(){
         console.log(xmlhttp.status,xmlhttp.readyState);
         if(xmlhttp.readyState == 4 && xmlhttp.status == 200){
@@ -13,7 +21,7 @@ var rec = new Promise((res,rej)=>{
             rej(xmlhttp.statusText);
         }
     }
-    xmlhttp.open('GET','https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita');
+  
     xmlhttp.send();
     console.log(xmlhttp.status,xmlhttp.readyState);
 });
@@ -22,7 +30,7 @@ rec.then((result)=>{
     
     console.log('res'); console.log(result);
     console.log(typeof result);
-    var
+ 
      result = result.drinks;
     result && result.length >0 && result.forEach(obj=>{
         console.log(obj);
@@ -79,9 +87,27 @@ rec.then((result)=>{
     console.log('rej'); console.log(err);
 });
 
+function modelDiv(){
+    // console.log();
 
+    var divTag = document.createElement('div');
+    divTag.className('details');
+    divTag.innerHTML = `
+        <div class="header">
+            <h2> Drink Name ${strDrink} </h2>
+            <p>Ingredient</p>
+            <ul>
+                    
+            <li>
+        </div>
+    `
+}
 
 function showModel(){
     console.log('check');
     document.querySelector('#modalPopUp').style.display = 'block';
+}
+function hideModel(){
+    console.log('check');
+    document.querySelector('#modalPopUp').style.display = 'none';
 }

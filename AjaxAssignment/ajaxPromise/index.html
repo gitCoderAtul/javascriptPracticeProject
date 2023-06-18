@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Promise</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/solid.css" integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css" integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous"/>
+    
 </head>
 <style>
          #modalPopUp{
@@ -36,12 +39,76 @@ flex-wrap: wrap; }
     .drink-image{flex-basis: 40%;}
     .drink-image img{width: 100%;}
     .drink-details{flex-basis: 60%; padding-left: 15px;} 
-    .drink-details p {margin-bottom: 5px;}
+    .drink-details h1{font-size: 20px; font-weight: 500; color:#0017b3;}
+    .drink-details p {margin-bottom: 5px; font-size: 14px;}
+    #header{background-color: #333131;}
+    nav{color: whitesmoke;display: flex;justify-content: space-between;flex-wrap: wrap;;}
+    .navigation{  flex-basis: 60%; align-items: center; display: flex; justify-content: end;}
+    .logo h3{ margin: 0; padding: 5px; font-size: 24px; }
+    ul.navigation{list-style: none; margin: 0;}
+     ul.navigation li{display: inline; padding: 0 10px; }
+     ul.navigation li div{position: relative;}
+     ul.navigation li div input{border-radius: 15px; padding: 3px 20px; border: none; width: 200px;}
+     ul.navigation li div button{position: absolute; right: 0; border-radius: 15px;
+padding: 3px 13px; border: none; border: none; background-color: #0a77bf; color: white;} 
+.category{ background: #ececec; padding: 10px 10px; }
+.category h5{color: #0a77bf;}
+.category h6{font-size: 15px; color: #ee6f51;}
+.category ul li{ font-size: 14px;}
 </style>
 <body>
-    <h1>Promise Javascript</h1>
-<div class="container">
-    <div class="row" id="drinkDetail">
+    <header id="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                <nav>
+                    <div class="logo"> <h3>DrunkYards</h3> </div>  
+                    <!-- <div > -->
+                        <ul class="navigation">
+                            <li>Home</li>
+                            <li><div>
+                                    <input type="text" placeholder="Search"> 
+                                    <button class="btn-search">  <i class="fas fa-search"></i> </button>
+                                </div>
+                            </li>
+                        </ul>
+                    <!-- </div> -->
+                </nav>
+            </div>
+            </div>
+        </div>
+    </header>
+<div class="container-fluid">
+    <div class="row" >
+        <div class="col-md-2">
+            <div class="category">
+                <h5>Category</h5>
+                <h6>Filter By Alcoholic</h6>
+                <ul id="listAlc">
+                    <li>Alcoholic</li>
+                    <li>Non-Alcoholic</li>
+                </ul>
+                <h6>Filter By Category</h6>
+                <ul id="listCat">
+                    <li>Ordinary Drink</li>
+                    <li>Cocktail</li>
+                    <li>Other / Unknown</li>
+                    <li>Soft Drink</li>
+                </ul>
+                <h6>Filter By Glass</h6>
+                <ul id="listGls">
+                    <li>Glass Type</li>
+                </ul>
+                <h6>List the categories, glasses, ingredients or alcoholic filters</h6>
+                <ul id="listAll">
+                    <li>Category</li>
+                    <li>Glasses</li>
+                    <li>Ingredients</li>
+                    <li>Alcoholic</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-md-10 row" id="drinkDetail"></div>
 
     </div>
 </div>
