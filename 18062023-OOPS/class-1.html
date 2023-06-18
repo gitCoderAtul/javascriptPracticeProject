@@ -1,0 +1,34 @@
+<script>
+    class DOM{
+    // there is 2 members.  methods and properties
+
+    //methods
+    getElementById(){
+        console.log('get elements by id');
+        // console.log(this);
+        console.log(this.innerText);
+        // this.querySelect()
+
+    }
+    querySelect(){
+        console.log('select element by id, tag and class');
+    }
+
+    // properties
+    innerText = 'hello';
+
+    }
+
+    var documentObject = new DOM();
+    console.log(typeof documentObject);
+    console.log(documentObject);
+    documentObject.getElementById();
+
+    documentObject.getElementById();
+
+    var rec = new Date();
+    console.log(rec);
+
+    var rec1 = new Array();
+    console.log(rec1);
+</script>
