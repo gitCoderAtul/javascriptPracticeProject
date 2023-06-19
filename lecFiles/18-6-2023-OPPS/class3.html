@@ -1,0 +1,28 @@
+<input type="text" id="txt1" /> <br>
+<input type="text" id="txt2" /> <br>
+<button>Enter</button>
+<p></p>
+
+<!-- <script src="auth.js"></script> -->
+
+<script type="module">
+
+    import {Userinfo,Userinfo1} from './auth.js';
+    console.log(Userinfo);
+    console.log(Userinfo1);
+    
+    document.querySelector('button').onclick = function(){
+        var uname = document.querySelector('#txt1').value;
+        var upass = document.querySelector('#txt2').value;
+
+        console.log(uname);
+        console.log(upass);
+
+        var obj =  new Userinfo();
+        console.log(obj);
+        obj.auth(uname,upass); //0 or 1
+        console.log(obj.auth(uname,upass));
+
+        document.querySelector('p').innerHTML = ( obj.auth(uname,upass)==1 )?"Valid":"Invalid";
+    }
+</script>

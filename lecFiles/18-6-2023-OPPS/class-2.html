@@ -1,0 +1,32 @@
+<script>
+    class DOM{
+        //members
+
+        // methods
+        getElementById() {
+            console.log('get ELement By Id Called');
+            // console.log(innerText);
+            console.log(this);
+            console.log(this.innerText);
+            // querySelector();
+            this.querySelector();
+        }
+
+        querySelector(){
+            console.log('select element By Tag,class & Id');
+        }
+
+        //public  properties
+        innerText = 'Hello';
+
+        //private Properties
+        #style = 'Do style'
+    }
+
+    var documentObject = new DOM;
+    console.log(documentObject);
+
+    documentObject.querySelector();
+    console.log(documentObject.innerText);
+    console.log(documentObject.style);
+</script>

@@ -1,0 +1,33 @@
+<script>
+    class DOM{
+        //members
+
+        // methods
+        getElementById() {
+            console.log('get ELement By Id Called');
+            // console.log(innerText);
+            console.log(this);
+            console.log(this.innerText);
+            // querySelector();
+            this.querySelector();
+        }
+
+        querySelector(){
+            console.log('select element By Tag,class & Id');
+        }
+        // properties
+        innerText = 'Hello';
+    }
+
+    var documentObject = new DOM();
+    console.log(typeof documentObject);
+    console.log(documentObject);
+
+    documentObject.getElementById();
+
+    var rec = new Date();
+    console.log(rec);
+
+    var rec1 = new Array();
+    console.log(rec1);
+</script>
