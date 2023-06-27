@@ -1,0 +1,26 @@
+<script>
+    async function apicall(apipath){
+        var res = await fetch(apipath);
+        var result = await res.json();
+        // console.log(result);
+        return result
+    }
+
+    const allPromise = Promise.all(
+        [
+            apicall('https://api.nobelprize.org/2.1/laureates?_ga=2.231527580.2070001567.1686736021-497096564.1686736019'),
+            apicall('https://fakestoreapi.com/products/categories')
+    ]);
+
+    allPromise.then((value) => {
+        // console.log(values); // [resolvedValue1, resolvedValue2]
+        console.log(value);
+        var [resolvedValue1, resolvedValue2] = value;
+      
+        console.log(resolvedValue1);
+        console.log(resolvedValue2);
+      
+        }).catch(error => {
+        console.log(error); // rejectReason of any first rejected promise
+        });
+</script>

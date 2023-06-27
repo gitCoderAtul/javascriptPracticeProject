@@ -34,7 +34,8 @@ rec.then((result)=>{
      result = result.drinks;
     result && result.length >0 && result.forEach(obj=>{
         console.log(obj);
-        var {strDrink,strCategory,strAlcoholic,strGlass,strInstructions,strDrinkThumb} = obj;
+        var {idDrink,strDrink,strCategory,strAlcoholic,strGlass,strInstructions,strDrinkThumb} = obj;
+        var drinkId = idDrink;
         var imgTag = document.createElement('img');
         imgTag.className = 'img-fluid';
         imgTag.setAttribute('src', strDrinkThumb);
@@ -55,8 +56,7 @@ rec.then((result)=>{
         // p3Tag.innerHTML = strInstructions;
 
         // var divTag = document.createElement('div');  
-        // divTag.classList = 'col-md-3';   
-
+        // divTag.classList = 'col-md-3';    
         var divTag = document.createElement('div');  
         divTag.classList = 'col-md-6';
         divTag.innerHTML = ` <div class="drink-section"> 
@@ -74,11 +74,11 @@ rec.then((result)=>{
         // divTag.append(h1Tag);
         // divTag.append(p1Tag);
         // divTag.append(p2Tag);
-        // divTag.append(p3Tag);
-        
+        // divTag.append(p3Tag); 
         document.getElementById('drinkDetail').append(divTag);
 
        document.getElementById('popup').onclick = showModel;
+       document.getElementById('popup').addEventListener('click',modelDiv(drinkId));
         
     });
       
@@ -87,24 +87,28 @@ rec.then((result)=>{
     console.log('rej'); console.log(err);
 });
 
-function modelDiv(){
+function modelDiv(id){
     // console.log();
-
-    var divTag = document.createElement('div');
-    divTag.className('details');
-    divTag.innerHTML = `
+    var modalDivTag = document.createElement('div');
+    modalDivTag.className = 'details';
+    modalDivTag.innerHTML = `
         <div class="header">
-            <h2> Drink Name ${strDrink} </h2>
+            <h2 style="color:white"> Drink Name ${id} </h2>
             <p>Ingredient</p>
             <ul>
                     
             <li>
         </div>
     `
+
+    document.querySelector('.modalDiv').append(modalDivTag);
+
+
 }
 
 function showModel(){
     console.log('check');
+  
     document.querySelector('#modalPopUp').style.display = 'block';
 }
 function hideModel(){

@@ -1,0 +1,33 @@
+<script>
+    class Email{
+        sendEmail(){
+            console.log('Send Email');
+        }
+    }
+
+    class Pdf extends Email{
+        generatePdf(){
+            console.log('Pdf Generated');
+        }
+    }
+
+    class Payment extends Pdf{
+        pay(){
+            console.log('Payment Done');
+        }
+    }
+
+    // class Ecommerce extends Pdf,Email,Payment{}
+    class Ecommerce extends Payment{
+        addToCart(){
+            console.log('Cart Procedure Done');
+            this.pay();
+            this.generatePdf();
+            this.sendEmail();
+        }
+    }
+
+    var obj = new Ecommerce();
+    console.log(obj);
+    obj.addToCart();
+</script>

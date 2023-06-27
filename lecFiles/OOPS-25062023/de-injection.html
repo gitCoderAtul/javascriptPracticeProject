@@ -1,0 +1,41 @@
+<script>
+
+    class Email{
+        sendEmail(){
+            console.log('Send Email');
+        }
+    }
+
+    class Pdf{
+        generatePdf(){
+            console.log('Pdf Generated');
+        }
+    }
+
+    class Payment {
+        pay(){
+            console.log('Payment Done');
+        }
+    }
+
+    // class Ecommerce extends Pdf,Email,Payment{}
+
+    class Ecommerce {
+        constructor(){
+            console.log('const');
+            this.x1 = new Email;
+            this.x2 = new Pdf;
+            this.x3 = new Payment;
+        }
+        addToCart(){
+            console.log('Cart Procedure Done');
+            this.x3.pay();
+            this.x2.generatePdf();
+            this.x1.sendEmail();
+        }
+    }
+
+    var obj = new Ecommerce();
+    console.log(obj);
+    obj.addToCart();
+</script>

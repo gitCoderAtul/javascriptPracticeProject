@@ -1,0 +1,19 @@
+<script>
+    class P1{
+        constructor(){
+            this.name = 'Akshay';
+            console.log('Parent Cons');
+        }
+    }
+    class P2 extends P1{ 
+        constructor()
+        {
+            super();
+            console.log(this);
+            console.log('Child Const' , this.name);
+        }
+    }
+
+    var rec = new P2();
+    console.log(rec);
+</script>
