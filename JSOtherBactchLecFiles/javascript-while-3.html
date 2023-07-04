@@ -1,0 +1,41 @@
+<script>
+
+    // 2 4 6 8 10
+
+    var i = 1;
+    while(i<=5){
+        console.log(i*2);
+        i++;
+    }
+
+    //1 4 9 16 25
+
+    var j = 1;
+    while(j<=5){
+        console.log(j**2);
+        j++;
+    }
+
+    // 1 4 7 10 13 16
+    /*
+        var x=1;
+        var y=3;
+
+         k?  z = x+y;    ( x=z)
+        -------------------
+        1   z = 1+3==> 4
+        2   z = 4+3==> 7
+        3   z = 7+3==> 10
+
+    */
+
+   var k=1;
+   var x=1;
+   var y=3;
+   while(k<=5){
+        var z = x+y;
+        console.log(k , z);
+        k++;
+        x=z;
+   }
+</script>

@@ -1,0 +1,66 @@
+<li>
+    <span>19 Year</span>    
+    <span>
+        Male
+    </span> 
+    <span>
+        India
+    </span>    
+    <p class="para">Edit</p>
+</li>
+
+<script>
+    document.querySelector('.para').onclick = function(){
+        var ans = this.parentNode.children
+        console.log(ans);
+        var text1 = ans[0].innerText;
+        var text2 = ans[1].innerText;
+        var text3 = ans[2].innerText;
+
+        var textbox1 = document.createElement('input');
+        textbox1.setAttribute('type','text');
+        textbox1.value = text1;
+
+        this.parentNode.append(textbox1);
+        ans[0].style.display = 'none';
+
+        var textbox2 = document.createElement('select');
+        var option1 = document.createElement('option');
+        var option2 = document.createElement('option');
+        var option3 = document.createElement('option');
+        option1.innerText = 'Male'
+        option2.innerText = 'FeMale'
+        option3.innerText = 'Not To Say'
+        textbox2.append(option1);
+        textbox2.append(option2);
+        textbox2.append(option3);
+
+        this.parentNode.append(textbox2);
+        ans[1].style.display = 'none';
+
+        var textbox3 = document.createElement('input');
+        textbox3.setAttribute('type','text');
+        textbox3.value = text3;
+
+        this.parentNode.append(textbox3);
+        ans[2].style.display = 'none';
+
+        var updateBt = document.createElement('button');
+        updateBt.innerText = 'Update';
+        updateBt.addEventListener('click',function(){
+            ans[0].innerText= textbox1.value;  
+            ans[1].innerText = textbox2.value;  
+            ans[2].innerText=textbox3.value;  
+
+            textbox1.style.display='none';
+            textbox2.style.display='none';
+            textbox3.style.display='none';
+            ans[0].style.display='block'
+            ans[1].style.display='block'
+            ans[2].style.display='block'
+        })
+        this.parentNode.append(updateBt);
+        
+
+    }
+</script>

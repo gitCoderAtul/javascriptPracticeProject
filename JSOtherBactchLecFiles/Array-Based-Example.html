@@ -1,0 +1,24 @@
+<script>
+    var numbers = [23,90,45,89,34,78];
+    // max value findout - 90
+    /*
+        maxvalue=  -Infinity
+        ----------------------------------
+        value    maxvalue     compare (value>maxvalue)
+        -----------------------------------
+        23       -Infinity    23 > -Infinity (true)   maxvalue=value ( maxvalue=23 )
+        90       23           90 > 23 (true)    maxvalue=value ( maxvalue=90 )
+        45       90           45>90 (false)
+        89       90           85>90 (false)
+    */
+    var maxvalue = -Infinity;
+    // console.log(maxvalue , typeof maxvalue);
+
+    for(value of numbers){
+        // console.log(value , maxvalue);
+        if(value>maxvalue){
+            maxvalue=value   
+        }
+    }
+    console.log('MAX RESULT : ' , maxvalue);
+</script>

@@ -1,0 +1,50 @@
+<script>
+    // ...rec Rest Parameter
+    function myfunc(a,b,...rec){
+        console.log(a);
+        console.log(b);
+        console.log(rec);
+    }
+
+    myfunc(10,20,30,40,50,60)
+</script>
+
+<script>
+    var dob = "1/9/1996";
+    console.log(dob , typeof dob);
+
+    var result = dob.split("/");  // 1 9 1996
+    console.log(result);
+
+    //Array destruction
+    var[a1,a2,a3] = dob.split("/");
+    console.log(a1,a2,a3);
+
+    //Array destruction
+    userName = "Akshay Ram Patil";
+    // console.log( userName.split(" ") );
+    var[fname,mname,lname] = userName.split(" ");
+    console.log(fname,mname,lname);
+</script>
+
+<script>
+     var info1 = {name:"akshay",age:20,place:'mumbai'};
+     console.log(info1.name);
+     console.log(info1.age);
+
+    var{age,name} = info1;
+    console.log(name,age);
+</script>
+
+<script>
+
+    extarr = ["pdf","doc","docx"];
+    // console.log(extarr);
+    filename = prompt('Enter Filename');
+
+    var[fname , ext] = filename.split(".");
+    console.log(ext);
+
+    var ans = extarr.indexOf(ext);
+    console.log(ans);
+</script>

@@ -1,0 +1,10 @@
+<script>
+    var res = fetch('https://fakestoreapi.com/products/category/electronics');
+    // console.log(res);
+    res.then(answer=>{
+        // console.log(answer.json());
+        answer.json().then(values=>{
+            console.log(values);
+        })
+    })
+</script>

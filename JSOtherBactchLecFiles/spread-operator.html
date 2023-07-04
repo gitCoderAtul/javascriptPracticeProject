@@ -1,0 +1,22 @@
+<script>
+    var user1 = ['rohit','sahil'];
+    var user2 = ['neel','vineet'];
+    var user3 = ['rohan','rohit'];
+    console.log(user3);
+
+    var ans = user3.concat(user1,user2);
+    console.log(ans);
+
+    //spread operator
+
+    var ans1 = [...user1 , ...user2 , ...user3];
+    console.log(ans1);
+
+
+    var info1 = {name:"akshay",age:20};
+    var info2 = {place:"mumbai"};
+    var info3 = {role:"developer" , age:22};
+
+    var info = {...info1, ...info2 , ...info3}
+    console.log(info);
+</script>

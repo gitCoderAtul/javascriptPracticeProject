@@ -1,0 +1,35 @@
+<script>
+    var numbers = [23,93,45,89,92,78,90];
+    /*
+        var max1 = -Infinity;
+        var max2 = -Infinity;
+        ------------------------------------------------------------------------------
+        value    max1        max2      value>max1(T) max1=value,max2=max1       
+        ------------------------------------------------------------------------------  
+        23      -Infinity  -Infinity   23> -Infinity (T)  max2=-Infinity  max1=23
+        93       23        -Infinity   93>23 (T)    max2=23   max1=93
+        -----------------------------------------------------------------
+        value    max1  max2     value<max1 && value>max2
+        --------------------------------------------------------------------
+        45       93    23       45<93  && 45>23 (T) ===>  max2=value; (max2=45)
+        89       93    45       89<93  && 89>45 (T) ==> max2=89
+        92       93    89       92<93  && 92>89 (T) ===> max2=92
+        
+    
+    */
+    var max1 = -Infinity;
+    var max2 = -Infinity;
+    for(value of numbers){
+        // console.log(value);
+        if(value>max1){
+            max2 =max1;
+            max1=value;
+        }
+        else if(value<max1 && value>max2){
+            max2 = value;
+        }
+    }
+
+    console.log("MAX1" , max1);
+    console.log("MAX2" , max2);
+</script>

@@ -1,0 +1,78 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <h1 >TEST1</h1>
+        <h1>TEST2</h1>
+        <ul>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+            <li>test</li>
+        </ul>
+        <!-- <button onclick="">ENTER</button> -->
+        <button id="btn">ENTER1</button>
+        <button id="btn">ENTER2</button>
+    </body>
+</html>
+
+<!-- 
+    DOM (Document Object Model Library - DOM )
+    MANIPULATE:
+    CONTENT (text)
+        h1 - Text Replace
+        h1 - Text Empty
+        h1 - Text Receive
+    STYLE
+        h1 - css apply , inline,class , internal
+    STRUCTURE
+        h1 - Remove
+        h1 - new tag add ( h2 )
+        h1 - (replace new tag h4 )
+        attribute - class (add,remove,value replace)
+
+    DOM special API (library) which present in ur browser env to manipulate web page
+    
+    DOM will consider web page as - collection of nodes(junctions) and Object
+
+    "document" is responsible to manipulate web page / DOM structure
+
+
+    DOM
+        Methods
+        Properties  
+            Traverse Properties
+        Event Handlers
+        Event Listeners
+        Node Manipulation
+ -->
+
+<script>
+    // console.log(typeof document);
+    // console.log(document);
+
+    console.log(typeof document.getElementById('btn'));
+    console.log(document.getElementById('btn'));
+
+
+    document.getElementById('btn').onclick = function(){
+        console.log('Hello');
+    }
+
+    document.getElementById('btn').onclick = function(){
+        console.log('World');
+        console.log(document);
+        console.log(typeof document.querySelector('h1'));
+        console.log(document.querySelector('h1'));
+
+        // document.querySelector('h1').innerText = ` Hello <i>World </i> `;
+        document.querySelector('h1').innerHTML = ` Hello <i>World </i> `;
+
+        document.querySelector('h1').style.background = 'gray';
+        document.querySelector('h1').style.fontSize = '40px';
+
+        // document.querySelector('ul').style.display = 'none';
+        document.querySelector('ul').remove();   
+    }
+</script>

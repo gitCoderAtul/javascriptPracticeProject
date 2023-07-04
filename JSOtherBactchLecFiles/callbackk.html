@@ -1,0 +1,22 @@
+<script>
+    ['nike','adidas','raymond'].forEach(function(a,b,c){
+        // console.log('test');   
+        console.log(a,b,c);
+    });
+
+    ['nike','adidas','raymond'].forEach((a,b,c)=>{
+        // console.log('test');   
+        console.log(a,b,c);
+    })
+
+    function myfunc(a,b,c){
+        console.log(a,b,c);
+    }
+    ['nike','adidas','raymond'].forEach(myfunc)
+
+    // 
+    
+    setInterval(()=>{
+        console.log(Math.random());
+    } , 2000)
+</script>

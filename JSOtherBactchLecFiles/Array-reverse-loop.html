@@ -1,0 +1,19 @@
+<script>
+    var arr1 = [23,90,45,89,34,78];
+    // var arr2 = [78,34,....];
+    /*
+        arr2[0] = arr1[arr1.lenth-1-i]
+        arr2[1] = arr1[arr1.lenth-1-i]
+    */
+
+    var i=0;
+    var arr2=[];
+    while(i< arr1.length){
+        arr2[i] = arr1[arr1.length-1-i];
+        console.log(i , arr1[i]);
+        i++;
+    }
+
+    console.log(arr1);
+    console.log(arr2);
+</script>

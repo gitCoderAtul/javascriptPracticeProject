@@ -1,0 +1,42 @@
+<script>
+
+    var myvar = function(){
+        console.log('First class Func');
+    }
+
+    myvar();
+
+    //////////////////////////////
+
+    function myfunc(a,b,c1){
+        console.log(a);
+        console.log(b);
+        console.log(typeof c1);
+        c1();
+    }
+
+    myfunc(10,20 , function(){
+        console.log('first class or callback ');
+    });
+
+    /////////////////////
+
+    function myfunc1(){
+        return 100;
+    }
+
+    var ans1 = myfunc1();
+    console.log(ans1);
+
+    
+    function myfunc2(){
+        return ()=>{
+            console.log('first class func');
+        }
+    }
+
+    var ans2 = myfunc2();
+    console.log(ans2);
+    ans2();
+    
+</script>

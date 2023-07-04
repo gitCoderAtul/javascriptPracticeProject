@@ -1,0 +1,33 @@
+<script>
+    var rec = new Promise((res,rej)=>{
+
+        var xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange = function(){
+            // console.log(xmlhttp.readyState , xmlhttp.status);
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                // console.log(xmlhttp.responseText);
+                var resultData = JSON.parse(xmlhttp.responseText);
+                res({
+                    status:200,
+                    result:resultData
+                });
+            }
+            else if(xmlhttp.readyState==4 && xmlhttp.status==404){
+                rej({
+                    status:404,
+                    message:"Path Invalid"
+                })
+            }
+        }
+        xmlhttp.open('GET','https://fakestoreapi.com/products/category/electronics');
+        xmlhttp.send();
+    })
+
+    console.log(rec);
+
+    rec.then(values=>{
+        console.log(values);
+    }).catch(errmsg=>{
+        console.log(errmsg);
+    })
+</script>

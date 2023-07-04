@@ -1,0 +1,44 @@
+<button id="btn1">1</button>
+<button id="btn2">2</button>
+
+<script>
+    document.querySelector('#btn1').onclick = function(){
+        console.log(this);
+        this.style.border="solid";
+    }
+    document.querySelector('#btn2').onclick = ()=>{
+        console.log(this);
+        // this.style.border="solid";
+    }
+</script>
+
+<script>
+    var info = {
+        name:"akki",
+        age:20,
+        display1:function(){
+            console.log('called');
+            console.log(this);
+            console.log(this.name);
+        },
+        display2:()=>{
+            console.log('called');
+            console.log(this);
+        }
+    }
+
+    info.display1();
+    info.display2();
+</script>
+
+<script>
+    var myvar = rec => console.log( rec**2 );
+
+    myvar(10)
+
+    var myvar1 = function(rec){
+        console.log(rec**2);
+    }
+
+myvar1(10)
+</script>

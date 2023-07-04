@@ -1,0 +1,41 @@
+<script>
+    //  {key:value}
+    var products = {
+        name:"Tshirt",
+        price:2000,
+        discount:10,
+        brandName:"Adidas",
+        path:"https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/l/h/x/s-ts12-vebnor-original-imagm6zvj4wrmyng.jpeg?q=70"
+    }
+
+    console.log(products);
+    console.log(products.name);
+    console.log(products.price);
+    console.log(products.discount);
+
+    console.log(products['name']);
+    console.log(products['price']);
+
+    document.write(`
+        <div>
+            <img src="${products.path}" alt="">
+            <h2>${products.price}</h2>
+            <p>${products.name}</p>
+            <p>
+                <button>Add To Cart</button>
+            </p>
+        </div>
+    `);
+</script>
+
+<style>
+    div{
+        width: 200px;
+       
+        border:solid;
+        text-align: center;
+    }
+    div > img{
+        width: 100%;
+    }
+</style>

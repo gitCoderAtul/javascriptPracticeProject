@@ -1,0 +1,33 @@
+<script>
+    var userName1;
+    console.log(userName1);
+
+    let userName;
+    console.log(userName);
+
+    const userName2 = 'Akshay';
+    console.log(userName2);
+
+    // const userName2 = 'Akshay Shah';
+
+    const brands = ['nike','puma'];
+    console.log(typeof brands);
+    console.log(brands);
+
+    Object.freeze(brands);
+
+    brands[0] = 'Raymond';
+    console.log(brands);
+
+    const info = {place:"mumbai",role:"developer"}
+    console.log(info);
+
+    Object.freeze(info);
+
+    info.place = 'thane';
+    console.log(info);
+
+    console.log(Object.keys(info));
+    console.log(Object.keys(info).length);
+
+</script>

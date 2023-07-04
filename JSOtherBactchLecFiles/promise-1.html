@@ -1,0 +1,35 @@
+<!-- 
+    its built in object
+    to handle any async operation
+    promise has 3 states
+        -- pending
+        -- Fulfilled
+        -- rejected
+    answer / op ==> handle ==> 2 handlers (functions)
+    Fulfilled ==> then()
+    rejected ==> catch()
+    both ==> finally()
+ -->
+
+<script>
+    var record = new Promise((res,rej)=>{
+        setTimeout(()=>{
+            // console.log(['akshay','ajay','ameya']);
+            // console.log(typeof res);
+            // console.log(typeof rej);
+            // res(['akshay','ajay','ameya']);
+            rej({error:'page not found',status:404})
+        },2000);
+    });
+    console.log(record);
+
+    record.then((values)=>{
+        console.log("Resolved Success");
+        console.log(values);
+    }).catch((err)=>{
+        console.log("Fail");
+        console.log(err);
+    }).finally(()=>{
+        console.log('Completed');
+    })
+</script>

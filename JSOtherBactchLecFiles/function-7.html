@@ -1,0 +1,16 @@
+<script>
+    function EMI(P,N,R){
+
+        N = N*12;
+        R = R/12/100;
+        console.log(P);
+        console.log(N);
+        console.log(R);
+        //P x R x (1+R)^N / [(1+R)^N-1]
+        // console.log(3**4);
+        var EMI = P * R * (1+R)**N / ( (1+R)**N - 1 );
+        console.log(EMI);
+    }
+
+    EMI(2500000,30,8.5);
+</script>

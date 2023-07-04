@@ -1,0 +1,17 @@
+<script>
+    class P1{
+        show(){
+            console.log('parent class SHow');
+        }
+    }
+    class P2 extends P1{
+        show(){
+            super.show();
+            console.log('Child class SHow');
+        }
+    }
+
+    var rec = new P2();
+    console.log(rec);
+    rec.show();
+</script>

@@ -1,0 +1,43 @@
+<script>
+    // A string is said to be palindrome if it remains the same on reading from both ends. 
+
+    // nayan
+    var str1 = "nayan";
+    // console.log(str1.reverse());
+
+    var ans = str1.split(""); // ["n","a","y","a","n"]
+    console.log(ans);
+
+    var ans1 = ans.reverse();
+    console.log(ans1);
+
+    var ans2 = ans1.join("");
+    console.log(ans2);
+
+    console.log(str1==ans2);
+
+    var result = (str1==ans2)?("palindrome Yes"):('palindrome No')
+    console.log(result);
+
+    /////////////////////////////////////////////////////////////////////
+
+
+    var str1 = "nayan";
+    var str2 = str1.split("").reverse().join("");
+    (str1==str2)?( console.log('YES')):(console.log('no'));
+
+    /////////////////////////////////////////////////////////////////////
+
+    var str1 = 'nayan';
+    // console.log(str1[0]);
+    // console.log(str1[1]);
+    var str2 = '';
+    var i=0;
+    while(i<str1.length){
+        console.log(i , str1[i]);
+        str2 = str2 + str1[str1.length-1-i];
+        i=i+1;
+    }
+    console.log(str1, str2);
+    (str1==str2)?( console.log('YES')):(console.log('no'));
+</script>

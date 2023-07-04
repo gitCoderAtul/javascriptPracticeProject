@@ -1,0 +1,26 @@
+<script>
+    var matchinfo = {
+        number:1000,
+        place:"mumbai",
+        date:"23-6-2023",
+        teams:{
+            team1:"csk",
+            team2:"MI"
+        }
+    }
+
+    console.log(typeof matchinfo);
+    console.log(matchinfo);
+
+    var result = JSON.stringify(matchinfo);
+    console.log(result);
+</script>
+
+<script>
+    var productinfo = '{"id":2000 , "name":"Tshirt" , "price":1000, "brans":["nike","adidas","puma"]}';
+    console.log(typeof productinfo);
+    console.log(productinfo);
+
+    var result = JSON.parse(productinfo);
+    console.log(result);
+</script>

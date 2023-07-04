@@ -1,0 +1,73 @@
+<!-- 
+    Ajax - Asynchronous Javascript and XML
+    Ajax - it is not a technology , its a technique
+    Ajax - it uses existing technologies ( html,css & javascript )
+    Ajax - client side (browser - user agent)
+    Ajax - transport your data from brwser to server side (api) or server side to browser (fetch) i.e. witout page refresh
+    Ajax - XMLHttpRequest ( browser Env ) 
+    Ajax - transport ( XML , JSON )
+    no page reload - network load (save)
+    part of ur page dynamicall change
+ -->
+<!-- 
+ icc.com/match/1000
+
+<?xml version="1.0" encoding="UTF-8"?>
+<match>
+    <number>1000</number>
+    <date>23-6-2023</date>
+    <place>mumbai</place>
+    <teams>
+        <team1>CSK</team1>
+        <team2>MI</team2>
+    </teams>
+</match>
+
+{"number":1000,"place":"mumbai","date":"23-6-2023","teams":{"team1":"csk","team2":"MI"}} -->
+
+
+<button>Enter</button>
+
+<ul style="border:1px solid;"></ul>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        document.querySelector('ul').innerHTML = ''
+        var apiPath = 'https://fakestoreapi.com/products/categories';
+
+        // var xmlhttp = new Date();
+        // console.log(xmlhttp);
+    
+        var xmlhttp = new XMLHttpRequest();
+        console.log(xmlhttp);
+
+        console.log(xmlhttp.status , xmlhttp.readyState); //0 0 
+
+        xmlhttp.onreadystatechange = function(){
+            console.log("in on readystatechange event");
+            console.log("status",xmlhttp.status ,"readystate", xmlhttp.readyState);
+
+            if(xmlhttp.status==200 && xmlhttp.readyState==4){
+                console.log(typeof xmlhttp.responseText);
+                console.log(xmlhttp.responseText);
+
+                var result = JSON.parse(xmlhttp.responseText);
+                console.log(result);
+
+                for(value of result){
+                    console.log(value);
+
+                    var liTag = document.createElement('li');
+                    liTag.innerHTML = value;
+
+                    document.querySelector('ul').append(liTag);
+                }
+            }
+        }
+
+        xmlhttp.open('get',apiPath,true); // 1
+        xmlhttp.send()//2
+    }
+
+
+</script>

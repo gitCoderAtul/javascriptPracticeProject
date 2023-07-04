@@ -1,0 +1,62 @@
+<script>
+    /*
+        *
+        **
+        ***
+        ****
+
+        ****
+        ***
+        **
+        *
+        
+        10 9 8 7
+        6 5 4 
+        3 2 
+        1
+
+        4 4 4 4
+        3 3 3
+        2 2
+        1
+    */
+    var row=1;
+    while(row<=4){
+        // console.log(row);
+        var col=1;
+        while(col<=row)
+        {
+            console.log("ROW=" , row,"COL=" , col);
+            document.write(` * `);
+            col++;
+        }
+        document.write("<br />");
+        row++;
+    }
+
+    document.write("<hr />");
+    ///////////////////////////////////////////////
+
+    var row=1;
+    var no=4;
+    var rec=10;
+    while(row<=4){
+        var col=1;
+        while(col<=no){
+            console.log("ROW=",row ,"COL=", col ,"NO=", no);
+            document.write(rec + " ");
+            rec--;
+            col++;
+        }
+        document.write("<br />");
+        row++;
+        no--;
+    }
+</script>
+
+<style>
+    div{
+        border:solid;
+        padding: 10px;
+    }
+</style>

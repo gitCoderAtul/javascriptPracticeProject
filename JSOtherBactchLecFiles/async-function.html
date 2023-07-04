@@ -1,0 +1,139 @@
+<script>
+    function myfunc(){
+        // console.log('A');
+        return;
+        // console.log('B');
+
+    }
+
+    var ans = myfunc();
+    console.log(ans);
+</script>
+
+<script>
+    function myfunc(){
+        // console.log('A');
+        return 10;
+        // console.log('B');
+
+    }
+
+    var ans = myfunc();
+    console.log(ans);
+</script>
+
+<script>
+    function myfunc(){
+        // console.log('A');
+        return 10.90;
+        // console.log('B');
+
+    }
+
+    var ans = myfunc();
+    console.log(ans);
+</script>
+
+<script>
+    function myfunc(){
+        // console.log('A');
+        return [10,10.9];
+        // console.log('B');
+
+    }
+
+    var ans = myfunc();
+    console.log(ans);
+</script>
+
+<script>
+    function myfunc(){
+        // console.log('A');
+        return {name:"akki",age:20};
+        // console.log('B');
+
+    }
+
+    var ans = myfunc();
+    console.log(ans);
+</script>
+
+
+<script>
+    function myfunc(){
+        // console.log('A');
+        return function(){
+            return 100;
+        }
+        // console.log('B');
+
+    }
+
+    var ans = myfunc()();
+    console.log(ans);
+</script>
+
+<script>
+    function myfunc(a1)
+    {
+        // console.log('A');
+        return function(a2){
+
+            return function(a3){
+                return 200 + a1+a2+a3;
+            }
+        }
+        // console.log('B');
+
+    }
+
+    var ans = myfunc(9)(11)(13);
+    console.log(ans);
+</script>
+
+
+<script>
+    // closure
+
+    function Outer(){
+        console.log('Outer Func Called');
+        var x=10;
+        function Inner(){
+            var y=20;
+            console.log('Inner Func Called',x,y,z);
+
+        }
+        
+        Inner();
+        // console.log(y);
+        var z = 100;
+    }
+    Outer();
+    
+</script>
+
+
+<script>
+    async function f5(){
+        return 100;
+    }
+
+    var ans = f5();
+    console.log(ans);
+
+    ans.then(value=>{
+        console.log(value);
+    })
+</script>
+
+<script>
+    var f6 = async  function(){
+        return 1000;
+    }
+
+   var ans =  f6();
+   console.log(ans);
+   ans.then(val=>{
+    console.log(val);
+   })
+</script>

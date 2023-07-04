@@ -1,0 +1,64 @@
+<script>
+    var allProducts = [
+        {
+            name:"Jeans",
+            price:1000,
+            discount:20,
+            brandName:"Puma",
+            path:"https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/l/h/x/s-ts12-vebnor-original-imagm6zvj4wrmyng.jpeg?q=70"
+        },
+        {
+            name:"Belt",
+            price:3000,
+            discount:40,
+            brandName:"Zara",
+            path:"https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/j/8/l/s-vd-os-100-lt1970-sw-veirdo-original-imagp8zkf7jd5gvr.jpeg?q=70"
+        },
+        {
+            name:"Tshirt",
+            price:2000,
+            discount:10,
+            brandName:"Adidas",
+            path:"https://rukminim1.flixcart.com/image/612/612/xif0q/t-shirt/q/2/i/m-s-r-b-w-farbot-original-imagjuxy9kn5qyam.jpeg?q=70"
+        }
+    ];
+
+    console.log(allProducts);
+
+    // for(val of allProducts){
+    //     console.log(val);
+    //     document.write(`
+    //         <div>
+    //             <img src='${val.path}' />
+    //             <h2>${val.price}</h2>
+    //             <p>${val.name}</p>   
+                
+    //         </div>
+    //     `)
+    // }
+
+    for(val in allProducts){
+        console.log(val , allProducts[val]);
+        document.write(`
+            <div>
+                <img src='${allProducts[val].path}' />
+                <h2>${allProducts[val].price}</h2>
+                <p>${allProducts[val].name}</p>   
+                
+            </div>
+        `)
+    }
+</script>
+
+
+<style>
+    div{
+        width: 200px;
+        border:solid;
+        text-align: center;
+        float: left;
+    }
+    div > img{
+        width: 100%;
+    }
+</style>

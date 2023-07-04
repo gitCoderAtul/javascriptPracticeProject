@@ -1,0 +1,20 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+
+<button>Enter</button>
+<script>
+    // console.log(axios);
+    document.querySelector('button').onclick = function(){
+        var ans = axios.get("https://fakestoreapi.com/products/category/electronics");
+
+        console.log(ans);
+        
+        ans.then(values=>{
+            console.log(values);
+            console.log(values.data);
+        }).catch(err=>{
+            console.log("err");
+            console.log(err);
+        })
+    }
+</script>
