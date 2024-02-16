@@ -1,12 +1,38 @@
-<script>
-    var ans = fetch("https://fakestoreapi.com/products/categories");
-    console.log(ans);
 
+<ul id="cat">
+
+    </ul>
+
+<script>
+    // var rec = new Promise(function(res,rej){
+    //     // res("Completed Task")
+    //     rej("Task Fail")
+    // });
+
+    // rec.then(val=>{
+    //     console.log(val);
+    // }).catch(err=>{
+    //     console.log(err);
+    // })
+
+
+    var ans = fetch("https://fakestoreapi.com/products/categories")
+    // console.log(ans);
     ans.then(res=>{
-         console.log(res);
+        // console.log(res.json());
         res.json().then(val=>{
             console.log(val);
-        })
-    })
-
+            
+            val && val.length > 0 && val.forEach(obj => {
+                console.log(obj);
+                 //distruction
+                 var{image, price, title} = obj;
+                 console.log(document);
+                 var listTag = document.createElement('li');                 
+                 listTag.innerHTML = obj;
+                 console.log(listTag);
+                 document.querySelector('#cat').append(listTag);
+            })
+        });
+    });
 </script>
