@@ -1,0 +1,48 @@
+<button>Enter</button>
+
+<div class="container">
+    <div class="row"></div>
+</div>
+
+<script>
+    'use strict';
+    document.querySelector('button').onclick = function(){
+        var xmlhttp = new XMLHttpRequest();
+        console.log(xmlhttp);
+
+        console.log(xmlhttp.readyState , xmlhttp.status);
+
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.readyState , xmlhttp.status);
+
+            if(xmlhttp.readyState==4 && xmlhttp.status==404){
+                throw new Error('API FAIL');
+            }
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                console.log(xmlhttp.responseText);
+                var ans = JSON.parse(xmlhttp.responseText);
+                console.log(ans);
+
+                ans && ans.length>0 && ans.map(({title,price})=>{
+                    // console.log(obj);
+                    var div = document.createElement("div");
+                    console.log(typeof div);
+                    div.className ='col-3 text-center';
+                    console.log(typeof document.querySelector('.row'));
+
+                    var h2 = document.createElement("h2");
+                    h2.innerHTML = price;
+                    div.append(h2);
+                    document.querySelector('.row').append(div);
+                })
+            } 
+
+        }
+
+        xmlhttp.open('GET', 'https://fakestoreapi.com/products111');
+        xmlhttp.send();
+
+
+    }
+    
+</script>

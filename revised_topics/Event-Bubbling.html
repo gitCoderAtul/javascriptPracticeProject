@@ -1,0 +1,23 @@
+<div onclick="f2()">
+    <button onclick="f1()">Enter</button>
+</div>
+
+<form action="" onsubmit="f3()">
+    <input type="text" required>
+    <button>Enter</button>
+</form>
+<script>
+    function f1(){
+        // event.cancelBubble = true;
+        event.stopPropagation();
+        console.log('button onclick');
+    }
+    function f2(){
+        console.log('div onclick');
+    }
+    function f3(){
+        
+        event.preventDefault();
+        console.log('form submitted');
+    }
+</script>

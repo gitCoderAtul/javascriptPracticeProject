@@ -1,0 +1,24 @@
+<script>
+    'use strict';
+
+    var userName;
+    let userAge;
+
+    userName='akshay';
+    userName='ajay';
+
+    userAge=20;
+    userAge=21;
+
+    console.log(userName);
+    console.log(userAge);
+
+    const apiPath = 'http://localhost:9000/users';
+    // const apiPath = 'http://localhost:9000/users';
+    console.log(apiPath);
+
+    const users = ['user1', 'user2', 'user3'];
+    Object.freeze(users);
+    users[0] = 'test';
+    console.log(users);
+</script>

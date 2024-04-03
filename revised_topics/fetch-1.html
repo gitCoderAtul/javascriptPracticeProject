@@ -1,0 +1,22 @@
+<button>
+    Enter
+</button>
+
+<script>
+    async function xyz(){
+        var res = await fetch('https://fakestoreapi.com/products')
+        // console.log(res);
+        var ans = await res.json();
+        console.log(ans);
+        console.log(ans[0].id);
+
+        var res = await fetch('https://fakestoreapi.com/products/'+ans[0].id);
+        // console.log(res);
+        var ans = await res.json();
+        console.log(ans);
+    }
+
+    document.querySelector('button').onclick = function(){
+        xyz();   
+    }
+</script>

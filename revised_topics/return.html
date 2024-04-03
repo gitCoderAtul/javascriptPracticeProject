@@ -1,0 +1,60 @@
+<script>
+    // function xyz(){
+    //     return;
+    // }
+
+    // var ans = xyz();
+    // console.log(ans);
+
+    // function xyz(){
+    //     return [];
+    // }
+
+    // var ans = xyz();
+    // console.log(ans);
+    // function xyz(){
+    //     return {};
+    // }
+
+    // var ans = xyz();
+    // console.log(ans);
+
+    // function xyz(){
+    //     return function(){
+    //         console.log('called');
+    //     }
+    // }
+
+    // var ans = xyz();
+    // // console.log(ans);
+    // ans();
+
+    function xyz(a){
+        return function(b){
+            return function(c){
+                console.log('called',a,b,c);
+            }
+        }
+    }
+
+    // var ans = xyz();
+    // // console.log(ans);
+    // var ans1 = ans();
+    // ans1();
+
+    xyz(100)(200)(3);
+
+
+    function xyz1(a){
+        function xyz2(b){
+            function xyz3(c){
+                console.log('called',a,b,c);
+            }
+            xyz(300);
+        }
+        xyz2(200);
+    }
+
+    xyz1(100);
+    
+</script>

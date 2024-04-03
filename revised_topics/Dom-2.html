@@ -1,0 +1,18 @@
+<button>Enter</button>
+<p></p>
+<script>
+    document.querySelector('button').addEventListener('click', function()
+    {
+        var xyz=100;
+        document.querySelector('p').innerHTML  = '<b>test</b>';
+        document.querySelector('p').innerText  = `
+        <b>test ${xyz}</b>
+        `;
+    })
+
+    document.querySelector('button').addEventListener('click', function()
+    {
+        document.querySelector('p').style.background  = 'gray';
+        
+    })
+</script>

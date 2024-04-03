@@ -1,0 +1,41 @@
+<script>
+     var userinfo = {name:'ajay',age:20};
+
+    //  for(ans of userinfo){
+    //     console.log(ans);
+    //  }
+
+    for(ans in userinfo){
+        console.log(ans , userinfo[ans]);
+     }
+
+     var rec = [10,20,30];
+
+      for(ans of rec){
+        console.log(ans);
+     }
+
+     for(let i in rec){
+        console.log(i,rec[i]);
+     }
+
+    //  console.log(i);
+
+    rec.forEach(function(x,y,z){
+        console.log(Math.random() , x,y,z);
+    })
+    // userinfo.forEach(function(x,y,z){
+    //     console.log(Math.random() , x,y,z);
+    // })
+
+    rec.forEach((x,y,z)=>{
+        console.log(Math.random() , x,y,z);
+    })
+
+    rec.forEach(myfunction)
+
+    function myfunction(x,y,z){
+        console.log(Math.random() , x,y,z);
+        
+    }
+</script>

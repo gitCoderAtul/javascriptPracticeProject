@@ -1,0 +1,23 @@
+<button>
+    Enter
+</button>
+
+<script>
+    document.querySelector('button').onclick = function(){
+        fetch('https://fakestoreapi.com/products')
+        .then(res=>res.json())
+        .then(value=>{
+            console.log(value);
+
+            var ans = value.filter(obj=> obj.id == 1);
+            console.log(ans);
+            console.log(ans[0].id);
+
+            fetch('https://fakestoreapi.com/products/'+ans[0].id)
+            .then(res=>res.json())
+            .then(value=>{
+                console.log(value);
+            });
+        })
+    }
+</script>

@@ -1,0 +1,50 @@
+<!--  
+    AJAX -- Asynchronous Javascript and XML
+    AJAX - Technique
+    AJAX - existing technology  ( Javascript , HTML,CSS)
+    AJAX - Without page refresh Browser to  server side communication (POST,GET,PUT,DELETE)
+    AJAX - XMLHttpRequest (XHR)
+    AJAX - it will change only portion of the page dynamically
+    AJax - client side (Browser or user Agent)
+
+    IE5 - ActiveXObject
+    IE6 - Mozilla (w3c) - XHR
+-->
+<noscript>
+    <h1>No Script</h1>
+</noscript>
+
+<button>Enter</button>
+<p>
+    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Necessitatibus dolores quis neque adipisci harum incidunt ullam, alias iusto ea aliquam minima, architecto repellat ipsum. Minus ullam itaque minima totam ab.
+</p>
+<script>
+    // var xmlhttp = new XMLHttpRequest(); 
+    // console.log(xmlhttp);
+
+    // var xmlhttp1 = new ActiveXObject("Microsoft.XMLHTTP");
+    // console.log(xmlhttp1);
+
+    document.querySelector('button').onclick = function(){
+        var xmlhttp = new XMLHttpRequest(); 
+        console.log(xmlhttp);
+        console.log(xmlhttp.readyState);
+        //0 Till now no Request is initialized by user
+
+        xmlhttp.onreadystatechange = function(){
+            console.log(xmlhttp.readyState,xmlhttp.status);
+
+            if(xmlhttp.readyState==4 && xmlhttp.status==200){
+                console.log(xmlhttp.responseText);
+
+                document.querySelector('p').innerHTML = xmlhttp.responseText;
+            }
+        }
+
+        xmlhttp.open('GET','http://localhost/yomik/ajax-server-page.php')
+         //1 Request has been setup with server side page
+
+        xmlhttp.send();
+        //request has been sent to server side page
+    }
+</script>

@@ -1,0 +1,38 @@
+<script>
+    var user1 = {name:'ajya' , dob:'12-2-2000'}
+    var user2= {name:'jay' , dob:'12-2-2001'}
+
+    var info = {
+        dob:function(place,degree){
+            console.log('dob called');
+            console.log(this);
+            console.log(place,degree);
+        },
+        dob1:()=>{
+            console.log('dob1 called');
+            console.log(this);
+        }
+    }
+
+    // console.log(info);
+    // info.dob();
+    info.dob.call(user1,'mumbai','BE');
+    // info.dob1.call(user1);
+    info.dob.apply(user1,['mumbai','BE']);
+
+    //////////////////////////////////////////////
+
+    var userinfo = {
+        show:function(){
+            console.log('userinfo show called');
+            console.log(this);
+        }
+    }
+
+    // userinfo.show();
+
+    // setTimeout(userinfo.show , 3000)
+
+    var result = userinfo.show.bind(userinfo);
+    setTimeout(result , 3000)
+</script>
